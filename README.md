@@ -54,3 +54,12 @@
 4. 2, 3번의 내용을 본인 이름의 폴더에 자신만의 표현으로 정리 
 (e.g., sungho/)
 5. 스터디에서 정리된 내용을 answer/*.md에 정리
+
+
+## 면접 질문지 및 노하우 정리 ref
+면접 질문지 모음
+
+- https://github.com/Jay-Ppark/ai-tech-interview#-statisticsmath
+- https://docs.google.com/document/d/10bJK8S4T7sBIP-pzdQm9xRpW0HcLsrh6D047pE_kFE8/edit
+- https://zzsza.github.io/data/2018/02/17/datascience-interivew-questions/#%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D
+- https://github.com/gyoogle/tech-interview-for-developer
