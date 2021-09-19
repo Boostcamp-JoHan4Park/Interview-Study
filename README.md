@@ -87,3 +87,4 @@
 - https://docs.google.com/document/d/10bJK8S4T7sBIP-pzdQm9xRpW0HcLsrh6D047pE_kFE8/edit
 - https://zzsza.github.io/data/2018/02/17/datascience-interivew-questions/#%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D
 - https://github.com/gyoogle/tech-interview-for-developer
+- https://www.topbots.com/nlp-interview-questions/
