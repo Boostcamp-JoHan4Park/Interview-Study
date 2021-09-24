@@ -31,7 +31,7 @@ https://realblack0.github.io/2020/03/29/normalization-standardization-regulariza
 
 ### #3
 
-말 그대로 local minima는 특정 범위 내의 최소값, global minima는 전 구간에서의 최소값이다. 우리는 학습을 진행할 때 local minima에 빠지지 않고 global minima를 찾는 것을 목적으로 한다.
+말 그대로 local minima는 **특정 범위 내의 최소값**, global minima는 **전 구간에서의 최소값**입니다. 우리는 학습을 진행할 때 local minima에 빠지지 않고 **global minima를 찾는 것을 목적**으로 합니다.
 
 
 
