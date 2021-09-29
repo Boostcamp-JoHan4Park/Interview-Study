@@ -10,9 +10,9 @@
 ## Answers
 ### #1
 
-**Keyword** : MSE : 오차 제곱의 합의 평균 / 이상치를 잡아내는데 효과적
+**Keyword** : MSE : 오차 제곱의 합의 평균 / MAE에 비해 이상치에 민감함
 
-대표적으로 MSE가 있습니다. MSE는 오차를 제곱하여 평균을 낸 metric입니다. 오차에 제곱을 하여 연산을 하기 때문에 이상치(outlier)를 잡아내는데 효과적이라고 알고 있습니다.
+대표적으로 MSE가 있습니다. MSE는 오차를 제곱하여 평균을 낸 metric입니다. 오차에 제곱을 하여 연산을 하기 때문에 MAE에 비해 이상치(outlier)에 민감합니다.
 
 
 
@@ -28,7 +28,25 @@
 
 https://realblack0.github.io/2020/03/29/normalization-standardization-regularization.html
 
+
+
 ### #3
+
+**Keyword** :  local minima는 특정 범위 내의 최소값, global minima는 전 구간에서의 최소값
+
+말 그대로 local minima는 특정 범위 내의 최소값, global minima는 전 구간에서의 최소값이다. 우리는 학습을 진행할 때 local minima에 빠지지 않고 global minima를 찾는 것을 목적으로 한다.
+
+
+
 ### #4
+
+**Keyword** : 차원이 커질수록 데이터가 상대적으로 희박해지는 문제
+
+데이터 학습을 위한 차원이 증가하면서, 차원의 수에 비해 데이터가 희박해져 성능이 저하되는 현상을 말합니다.
+
+주로 KNN알고리즘에서 발생합니다.
+
+
+
 ### #5
 ### #6
