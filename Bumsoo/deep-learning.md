@@ -5,6 +5,7 @@
    데이터를 분석하고 학습해서 얻은 정보를 바탕으로 새로운 데이터에 대한 결정을 내리는 알고리즘  
    --> Input과 output의 상관관계를 파악해 새로운 input에 대한 output을 예측함! 이때 쓰이는게 stаtistiсаl leаrning аlgоrithms
    - DL: 학습을 통해 end-to-end, data dependent
+   - 가장 큰 차이는 feature extraction!!
 
 
 ### Cost Function과 Activation Function은 무엇인가요?

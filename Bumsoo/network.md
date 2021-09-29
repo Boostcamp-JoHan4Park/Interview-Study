@@ -6,6 +6,7 @@
    - OSI 7계층 : 네트워크 전송 시 데이터 표준을 정리한 것으로, 개념적 모델로 통신에는 실질적으로 사용되지 않는다.
    - TCP / IP : 연결을 설정하고 네트워크를 통해 통신하는 데 실제로 사용
 
+
 ### Frame, Packet, Segment, Datagram을 비교해주세요.
    - Segment: If the transport protocol is TCP, the unit of data sent from TCP to network layer is called Segment.
    - Datagram: This is used in 2 layers. If the network protocol is IP, the unit of data is called Datagram. At transport layer, if protocol is UDP, we use datagram there as well. Hence, we differentiate them as UDP Datagram, IP Datagram.
@@ -20,11 +21,14 @@
    - TCP: 인터넷상에서 데이터를 메세지의 형태로 보내기 위해 IP와 함께 사용하는 프로토콜  
    발신지와 수신지를 연결하여 패킷을 전송하기 위한 논리적 경로를 배정  
    연결형 서비스로 신뢰도를 보장하지만 속도가 느리기 때문에 파일 전송 등에 사용
+
    - UDP: 데이터를 데이터그램 단위로 처리하는 비연결형 프로토콜  
    비연결형 서비스로 데이터그램 방식을 제공
+
    UDP는 비연결형 서비스이기 때문에, 연결을 설정하고 해제하는 과정이 존재하지 않습니다.  
    서로 다른 경로로 독립적으로 처리함에도 패킷에 순서를 부여하여 재조립을 하거나 흐름 제어 또는 혼잡 제어와 같은 기능도 처리하지 않기에 TCP보다 속도가 빠르며 네트워크 부하가 적다는 장점이 있지만 신뢰성있는 데이터의 전송을 보장하지는 못합니다.  
-   그렇기 때문에 신뢰성보다는 연속성이 중요한 서비스 예를 들면 실시간 서비스(streaming)에 자주 사용됩니다.
+   그렇기 때문에 신뢰성보다는 연속성이 중요한 서비스 예를 들면 실시간 서비스(streaming)에 자주 사용됩니다.  
+   신뢰도는 handshake 때문!
    - 참고: https://mangkyu.tistory.com/15
 
 
