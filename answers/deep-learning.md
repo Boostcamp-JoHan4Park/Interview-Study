@@ -5,6 +5,8 @@
 * [Cost Function과 Activation Function은 무엇인가요?](#2)  
 * [Tensorflow, PyTorch 특징과 차이가 뭘까요?](#3)  
 * [Data Normalization은 무엇이고 왜 필요한가요?](#4)  
+* [알고있는 Activation Function에 대해 알려주세요. (Sigmoid, ReLU, LeakyReLU, Tanh 등)](#5)  
+* [오버피팅일 경우 어떻게 대처해야 할까요?](#6)  
 
 ## Answers  
 ### #1
@@ -24,3 +26,7 @@ Activation function은 **선형함수를 비선형함수로** 만들어주는 �
 
 
 ### #4
+
+### #5
+
+### #6
