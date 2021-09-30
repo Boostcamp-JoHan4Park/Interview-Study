@@ -4,7 +4,10 @@
 * 고유값(eigen value)와 고유벡터(eigen vector)에 대해 설명해주세요. 그리고 왜 중요할까요?  
 * 샘플링(Sampling)과 리샘플링(Resampling)에 대해 설명해주세요. 리샘플링은 무슨 장점이 있을까요?  
 * 확률 모형과 확률 변수는 무엇일까요?  
+ 확률변수: 정의역, 표현하기 위한 event
+ 확률모형: 확률변수를 확률에 mapping한 함수
 * 누적 분포 함수와 확률 밀도 함수는 무엇일까요? 수식과 함께 표현해주세요.  
+누적 분포 함수
 
 ### [Deep Learning](./answers/deep-learning.md)  
 
