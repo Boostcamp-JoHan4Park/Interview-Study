@@ -5,8 +5,13 @@
 * [멀티 프로세스 대신 멀티 스레드를 사용하는 이유를 설명해주세요.](#2)  
 * [캐시의 지역성에 대해 설명해주세요.](#3)  
 * [Thread-safe에 대해 설명해주세요. (hint: critical section)](#4)  
+* [뮤텍스와 세마포어의 차이를 설명해주세요.](#5)
+* [스케줄러가 무엇이고, 단기/중기/장기로 나누는 기준에 대해 설명해주세요.](#6)
+
+
 
 ## Answers
+
 ### #1
 ### #2
 ### #3
@@ -38,3 +43,25 @@ Mutual Exclusion : 한 Thread가 자원에 접근할 때 다른 Thread의 접근
 REF
 
 https://gompangs.tistory.com/entry/OS-Thread-Safe%EB%9E%80
+
+
+
+### #5
+
+뮤텍스는 Locking 메커니즘으로 락을 걸은 쓰레드만이 임계 영역을 나갈때 락을 해제할 수 있다. 하지만 세마포어는 Signaling 메커니즘으로 락을 걸지 않은 쓰레드도 signal을 사용해 락을 해제할 수 있다.
+
+
+
+ref
+
+https://mangkyu.tistory.com/104
+
+### #6
+
+단기 스케줄러는 CPU와 메모리 사이의 스케줄링을 담당하고 장기 스케줄러는 메모리와 디스크 사이의 스케줄링을 담당한다. 중기 스케줄러는 스와핑(Swapping)을 통해 프로세스들이 CPU경쟁이 심해지는 것을 방지하는 역할을 한다.
+
+
+
+ref
+
+https://cocoon1787.tistory.com/125
