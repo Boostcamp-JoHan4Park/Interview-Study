@@ -5,6 +5,8 @@
 * [Cost Function과 Activation Function은 무엇인가요?](#2)  
 * [Tensorflow, PyTorch 특징과 차이가 뭘까요?](#3)  
 * [Data Normalization은 무엇이고 왜 필요한가요?](#4)  
+* [알고 있는 Activation Function에 대해 알려주세요.](#5)
+* [오버피팅일 경우 어떻게 대처해야 할까요?](#6)
 
 ## Answers  
 ### #1
@@ -24,3 +26,14 @@ Tensorflow는 static하게 graph를 정의하고 실행 시점에서 실행이 �
 ### #4
 
 Data를 일정 범위 내의 값으로 바꾸어주어 exploding이나 vanishing 현상을 막기 위해 사용한다.
+
+
+### #5
+
+주로 Activation Function은 비선형 함수를 사용합니다. ReLU가 대표적으로 있습니다. 0미만인 값은 0으로 0이상인 값은 x값으로 변형해주는 함수입니다.
+
+
+
+### #6
+
+오버 피팅의 경우 학습을 더 어렵게 하는 Regularization을 진행한다. 예시로 Data augmentation,dropout, BatchNormalization 등이 있다.

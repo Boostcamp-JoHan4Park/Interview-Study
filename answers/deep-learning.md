@@ -1,32 +1,50 @@
-# Deep Learning  
+# Deep Learning
 
-## Questions  
-* [딥러닝은 무엇인가요? 딥러닝과 머신러닝의 차이는?](#1)  
-* [Cost Function과 Activation Function은 무엇인가요?](#2)  
-* [Tensorflow, PyTorch 특징과 차이가 뭘까요?](#3)  
-* [Data Normalization은 무엇이고 왜 필요한가요?](#4)  
-* [알고있는 Activation Function에 대해 알려주세요. (Sigmoid, ReLU, LeakyReLU, Tanh 등)](#5)  
-* [오버피팅일 경우 어떻게 대처해야 할까요?](#6)  
+## Questions
 
-## Answers  
+- [딥러닝은 무엇인가요? 딥러닝과 머신러닝의 차이는?](#1)
+- [Cost Function과 Activation Function은 무엇인가요?](#2)
+- [Tensorflow, PyTorch 특징과 차이가 뭘까요?](#3)
+- [Data Normalization은 무엇이고 왜 필요한가요?](#4)
+- [알고있는 Activation Function에 대해 알려주세요. (Sigmoid, ReLU, LeakyReLU, Tanh 등)](#5)
+- [오버피팅일 경우 어떻게 대처해야 할까요?](#6)
+
+## Answers
+
 ### #1
+
 **Keyword**: Neural network(인공신경망), Feature extraction(특징 추출)
 
 딥러닝은 머신러닝의 하위분야로, **인공신경망**을 이용한 머신러닝 기법입니다.  
 딥러닝과 머신러닝의 가장 큰 차이점은 **특징 추출**의 사용 유무입니다.  
 머신러닝은 특징추출의 방법을 사람이 직접 분석하고 판단하는 반면 딥러닝은 학습을 통해 end-to-end하게 작용하며 머신러닝보다 더 복잡하고 다양한 task를 수행할 수 있게 됐습니다.
 
-
 ### #2
+
 **Keyword**: Loss, 비선형
 
 Cost function은 모델의 예측값과 정답의 **오차(loss)를 계산**해주는 함수로, 학습 뱡향을 어느 방향으로 얼마나 개선할지 판단하는 지표입니다.  
 Activation function은 **선형함수를 비선형함수로** 만들어주는 함수로, 비선형성을 키워 모델이 복잡한 데이터와 연산도 고려할 수 있게 해줍니다
+
 ### #3
 
+**Keyword**: Define and Run, Define by Run
+
+Tensorflow는 **define and run** 방식으로, 세션을 미리 만들어 placeholder를 선언하고 코드를 실행하는 시점에 데이터를 넣는 반면,  
+PyTorch는 **define by run** 방식으로, 그래프를 만들면서 동시에 값을 할당하기 때문에 코드를 직관적이고 깔끔하게 작성할 수 있습니다.
 
 ### #4
 
+<<<<<<< HEAD
+**Keyword**: Data의 scale을 비슷하게
+
+Data Normalization은 입력 data의 scale(규모, 폭)을 0~1 사이로 비슷하게 줄여줌으로써 각 data가 비슷한 중요도를 갖고 학습할 수 있습니다
+또한 더 작은 scale을 가짐으로써 빠르게 수렴하고 gradient exploding을 방지할 수 있습니다
+
+### #5
+
+### #6
+=======
 ### #5 
 
 **Keyword** : Sigmoid, ReLU, Tanh, ELU
@@ -106,3 +124,4 @@ Activation function은 **선형함수를 비선형함수로** 만들어주는 �
     Epoch가 늘어날수록 Training Error는 줄어들지만, Testing Error는 증가하며 overfitting이 발생할 수 있습니다. 따라서 이전 Epoch에 비해 오차(Error)가 증가하면 오버피팅이 발생하기 전에 학습을 멈추는 방법입니다.
 
     ![](https://i.imgur.com/lHlJQH7.png)
+>>>>>>> 63ca0f58e450aacc338811209eb3f72fe1897b90
