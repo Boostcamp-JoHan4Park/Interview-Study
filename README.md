@@ -35,6 +35,8 @@
 * 누적 분포 함수와 확률 밀도 함수는 무엇일까요? 수식과 함께 표현해주세요.  
 * 조건부 확률은 무엇일까요?  
 * 공분산과 상관계수는 무엇일까요? 수식과 함께 표현해주세요.  
+* 신뢰 구간의 정의는 무엇인가요?  
+* p-value를 모르는 사람에게 설명한다면 어떻게 설명하실 건가요?  
 
 ### [Deep Learning](./answers/deep-learning.md)  
 
@@ -44,6 +46,8 @@
 * Data Normalization은 무엇이고 왜 필요한가요?  
 * 알고있는 Activation Function에 대해 알려주세요. (Sigmoid, ReLU, LeakyReLU, Tanh 등)  
 * 오버피팅일 경우 어떻게 대처해야 할까요?  
+* 하이퍼 파라미터는 무엇인가요?  
+* Weight Initialization 방법에 대해 말해주세요. 그리고 무엇을 많이 사용하나요?  
 
 ### [Machine Learning](./answers/machine-learning.md)  
 
@@ -53,6 +57,8 @@
 * 차원의 저주에 대해 설명해주세요.  
 * dimension reduction기법으로 보통 어떤 것들이 있나요?  
 * PCA는 차원 축소 기법이면서, 데이터 압축 기법이기도 하고, 노이즈 제거기법이기도 합니다. 왜 그런지 설명해주실 수 있나요?  
+* LSA, LDA, SVD 등의 약자들이 어떤 뜻이고 서로 어떤 관계를 가지는지 설명할 수 있나요?  
+* Markov Chain을 고등학생에게 설명하려면 어떤 방식이 제일 좋을까요?  
 
 <br>
 
