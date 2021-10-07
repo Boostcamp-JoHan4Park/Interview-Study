@@ -58,15 +58,12 @@ Data Normalization은 입력 data의 scale(규모, 폭)을 0~1 사이로 비슷�
 
     ![](https://i.imgur.com/dyQ6UVQ.png)
 
-4. **tanh function** 은 sigmoid function의 함수 값의 중간이 0이 아니라서 학습이 느리다는 단점을 극복한 함수입니다.
+4. **tanh function** 은 sigmoid function의 함수 값의 중간이 0이 아니라서 학습이 느리다는 단점을 극복한 함수입니다. tanh 함수는 입력을 -1 ~ 1 사이의 값으로 바꿔줍니다.
 
     ![](https://i.imgur.com/ua5y2m5.png)
 
-5. **ELU(Exponential Linear Units)** 은 ReLU와 Leaky ReLU의 중간정도(?)입니다. ELU는 Leaky ReLU처럼 zero-mean의 출력을 내지만 Saturation 관점에서는 ReLU의 특성도 갖습니다.
 
-    ![](https://i.imgur.com/kHinhTl.png)
-
-6. **Maxout**은 앞서 나온 activation function과는 다른 성격의 함수입니다. Saturated Regime이 없으며 gradient가 0이 되는 지점이 없다는 장점이 있습니다. 하지만 parameter 수가 두배가 된다는 단점이 있습니다.
+5. **Maxout**은 앞서 나온 activation function과는 다른 성격의 함수입니다. Saturated Regime이 없으며 gradient가 0이 되는 지점이 없다는 장점이 있습니다. 하지만 parameter 수가 두배가 된다는 단점이 있습니다.
 
     ![](https://i.imgur.com/RVQ36kg.png)
 
@@ -98,22 +95,14 @@ Data Normalization은 입력 data의 scale(규모, 폭)을 0~1 사이로 비슷�
 
     ![](https://i.imgur.com/zVHFTkS.png)
 
-
-
-4. Noise Rubustness
-
-    노이즈나 이상치(outlier) 같은 엉뚱한 데이터가 들어와도 흔들리지 않는 모델(=강건성 있는 모델)을 만들기 위한 방법으로 일부러 노이즈를 주는 방법입니다.
-
-    ![](https://i.imgur.com/at6Z46N.png)
-
-5. Batch Normalization
+4. Batch Normalization
 
     활성화 값이 적절하게 분포되도록 하는 값을 좋은 가중치의 초기 값으로 봅니다.
     가중치의 초기값에 의존하지 않고 활성화 값을 강제로 적절히 분포되도록 하는 것을 **배치 정규화(Batch Normalization)** 이라고 합니다.
 
     ![](https://i.imgur.com/jPnToAx.png)
 
-6. Early stopping
+5. Early stopping
 
     Epoch가 늘어날수록 Training Error는 줄어들지만, Testing Error는 증가하며 overfitting이 발생할 수 있습니다. 따라서 이전 Epoch에 비해 오차(Error)가 증가하면 오버피팅이 발생하기 전에 학습을 멈추는 방법입니다.
 
