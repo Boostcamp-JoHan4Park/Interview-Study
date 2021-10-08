@@ -30,10 +30,13 @@
   - PCA(Principal component analysis)
   - LDA(Linear discriminant analysis)
   - NMF(Non-negativ matrix facotrization)
-- 피처 선택 (Feature Selection) : 모든 Feature들 중 필요한 것들만 선택하는 기법
+- 피처 선택 (Feature Selection) : 모든 Feature들 중 필요한 것들만 선택하는 기법  
+  EDA 보고 사람이 휴리스틱하게 선택
   - Filtering : leave out dimenstions that do not help much
   - Wrapper : use an external heuristic to select dimensions
   - Embedded : put feature selection into the loss function
+- 참고: https://wooono.tistory.com/249  
+  https://wikidocs.net/16599
 
 ### PCA는 차원 축소 기법이면서, 데이터 압축 기법이기도 하고, 노이즈 제거기법이기도 합니다. 왜 그런지 설명해주실 수 있나요?
 
@@ -41,6 +44,24 @@
 - 결국은 feature(dimension)의 수를 줄이기 때문에 모든 효과가 발생
 
 - 참고: https://bkshin.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-9-PCA-Principal-Components-Analysis
+
+### LSA, LDA, SVD 등의 약자들이 어떤 뜻이고 서로 어떤 관계를 가지는지 설명할 수 있나요?
+
+Keyword: 행렬곱 분해, truncated SVD, 토픽 모델링
+Answer: SVD(특이값 분해)는 A가 m\*n 행렬일 때 m\*m 직교행렬, n\*n 직교행렬, m\*n 직사각형렬의 행렬곱으로 분해하는 것
+LSA(잠재 의미 분석)는 절단된 SVD(truncated SVD)를 이용해 차원을 축소시키고, 단어의 잠재적인 의미를 이끌어냄
+LDA는 LSA의 단점을 개선하여 탄생한 알고리즘으로 토픽 모델링에 보다 적합한 알고리즘
+
+- 직교행렬(orthogonal matrix): 자신과 자신의 전치 행렬(transposed matrix)의 곱 또는 이를 반대로 곱한 결과가 단위행렬(identity matrix)이 되는 행렬
+- 대각행렬(diagonal matrix): 주대각선을 제외한 곳의 원소가 모두 0인 행렬
+
+- 참고: https://wikidocs.net/24949
+
+### Markov Chain을 고등학생에게 설명하려면 어떤 방식이 제일 좋을까요?
+
+Keyword: 마르코프 성질, 이산시간, 확률과정  
+Answer: Markov Chain은 마르코프 성질을 가진 이산시간(discrete time) 확률과정(stochastic process)을 뜻하며,  
+마르코프 성질은 ‘과거 상태가 미래 상태에 전혀 영향을 미치지 않고, 오로지 현재 상태만 미래 상태에 영향을 미친다’라는 의미
 
 ---
 

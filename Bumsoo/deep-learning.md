@@ -45,7 +45,7 @@
   이로인해 생기는 문제점은 vanishing gradient현상이 있다.
 
 - Tanh: 그림에서 보면 알 수 있듯이 시그모이드 함수와 거의 유사하다.  
-  차이는 -1~1값을 가지고 데이터의 평균이 0이라는 점이다. 데이터의 평균이 0.5가 아닌 0이라는 유일한 차이밖에 없지만 대부분의 경우에서 시그모이드보다 Tanh가 성능이 더 좋다.  
+  차이는 -1~1값을 가지고 데이터의 평균이 0이라는 점이다. 데이터의 평균이 0.5가 아닌 0이라는 유일한 차이밖에 없지만 대부분의 경우에서 시그모이드보다 Tanh가 성능이 더 좋다. --> tanh의 기울기가 더 높기 때문에 train에서 성능이 더 좋음
   그러나 시그모이드와 마찬가지로 Vanishing gradient라는 단점이 있다.
 
 - ReLU: 대부분의 경우 일반적으로 ReLU의 성능이 가장 좋기때문에 ReLU를 사용한다.  
@@ -62,12 +62,29 @@
 
 ### 오버피팅일 경우 어떻게 대처해야 할까요?
 
+오버피팅: train loss는 줄지만, eval loss는 안 줄때
+
 1. 데이터 양 늘리기  
    데이터의 양이 적을 경우, 해당 데이터의 특정 패턴이나 노이즈까지 쉽게 암기하기 되므로 과적합 현상이 발생할 확률이 늘어납니다.
-2. 모델 복잡도 줄이기  
-   복잡도: 은닉층(hidden layer)의 수나 매개변수의 수
+2. ~~모델 복잡도 줄이기~~  
+   ~~복잡도: 은닉층(hidden layer)의 수나 매개변수의 수~~
+   --> 오히려 모델의 크기를 키우는게 답일수도
 3. Regularization 사용
 4. Dropout 사용
+5. Norm penalty 적용
+
+### 하이퍼 파라미터는 무엇인가요?
+
+Keyword: 직접 세팅
+Answer: learning rate나 SVM에서의 C, sigma 값, KNN에서의 K값 등 모델링할 때 사용자가 직접 세팅해주는 값
+
+- A model hyperparameter is a configuration that is external to the model and whose value cannot be estimated from data.
+
+### Weight Initialization 방법에 대해 말해주세요. 그리고 무엇을 많이 사용하나요?
+
+Keyword: Gaussian sampling, LeCun init, Xavier init, He init  
+Answer: Gaussian sampling하거나, 이전 node 수에 영향을 받는 LeCun init, 다음 node 수에도 영향을 받고 uniform/normal 분포를 따르는 Xavier init, He init 등이 있다  
+Activation function이 sigmoid, tanh일 경우 Xavier init을, ReLU일 경우 He init을 사용함
 
 ---
 

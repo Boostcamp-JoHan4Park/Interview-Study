@@ -80,7 +80,8 @@ UDP는 비연결형 서비스이기 때문에, 연결을 설정하고 해제하�
 4. A -> B: ACK  
    프로세스 A는 확인했다는 메시지를 전송
 
-- 참고: https://gmlwjd9405.github.io/2018/09/19/tcp-connection.html
+- 참고: https://gmlwjd9405.github.io/2018/09/19/tcp-connection.html  
+https://github.com/LandvibeDev/cs-special-forces-headquarters/blob/main/network/CH.03%ED%8A%B8%EB%9E%9C%EC%8A%A4%ED%8F%AC%ED%8A%B8%EA%B3%84%EC%B8%B5/CH.03%20%ED%8A%B8%EB%9E%9C%EC%8A%A4%ED%8F%AC%ED%8A%B8%20%EA%B3%84%EC%B8%B5.md
 
 ---
 
