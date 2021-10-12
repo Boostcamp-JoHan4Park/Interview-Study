@@ -1,19 +1,4 @@
 # Interview  
-<br>
-
-## Contents
-* Part1
-    * [Statistics/Math](#statistics/math)  
-    * [Deep Learning](#deep-learning)  
-    * [Machine Learning](#machine-learning)  
-* Part2  
-    * [Python](#python)  
-* Part3
-    * [Network](#network)  
-    * [Operating System](#operating-system)
-    * [Database](#database)
-    * [Algorithm](#algorithm)
-<br>
 
 ## Team Member  🙋‍ 🙋‍♂️ 
 
@@ -94,6 +79,22 @@
   </tr>
 </table>
 <br>  
+
+<br>
+
+## Contents
+* Part1
+    * [Statistics/Math](#statistics/math)  
+    * [Deep Learning](#deep-learning)  
+    * [Machine Learning](#machine-learning)  
+* Part2  
+    * [Python](#python)  
+* Part3
+    * [Network](#network)  
+    * [Operating System](#operating-system)
+    * [Database](#database)
+    * [Algorithm](#algorithm)
+<br>
 
 ## Study Process
 매주 아래의 과정을 반복
