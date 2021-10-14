@@ -71,7 +71,7 @@ PCA는 고유값이 가장 큰, 즉 데이터의 분산이 가장 큰 순으로 
 ### #7  
 
 ### #8  
-![image](https://sites.google.com/site/machlearnwiki/_/rsrc/1388728400812/RBM/markov-chain/markov%20chain%20picture.PNG?height=232&width=400)
+![image](https://sites.google.com/site/machlearnwiki/_/rsrc/1388728400812/RBM/markov-chain/markov%20chain%20picture.PNG?height=232&width=400)  
 마르코프 체인이란 마르코프 성질을 가진 이산확률과정을 의미하는데, 여기서 마르코프 성질이란 특정 상태의 확률을 오직 과거의 상태에 의존한다 라는 것이다. 
 
 ### #9  
