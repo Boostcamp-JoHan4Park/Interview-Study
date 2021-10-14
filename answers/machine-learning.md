@@ -52,6 +52,38 @@ https://realblack0.github.io/2020/03/29/normalization-standardization-regulariza
 
 
 ### #5  
+
+**Keyword** : 특징 추출, 특징 선택
+
+dimension reduction 기법은 특징 추출(feature extraction)과 특징 선택(feature selection)으로 나눌 수 있습니다. feature selection은 데이터의 경향을 잘 표현하지 못하는 차원을 소거해나가면서 진행할 수 있고, feature extraction의 경우에는 PCA, SVD, NMF와 같은 차원 축소 기법들을 활용해 차원을 줄일 수 있습니다. 
+
+- PCA(Principal component analysis, 주성분 분석)
+- SVD(Singular Value Decomposition, 특이값 분해)
+- NMF(Non-negative Matrix Factorization, 음수 미포함 행렬 분해)
+
+
 ### #6  
+
+**keyword** : 대표 축, 주성분
+
+PCA는 각 차원의 분산을 최대로 갖는 분포를 설명할 수 있는 대표 축을 뽑는 과정이고, 높은 주성분들만 선택하면 노이즈로 구성된 차원이 배제되기 때문에 노이즈 제거 기법이라 불리기도 합니다.
+
 ### #7  
+
+**keyword** : 토픽 모델링
+
+**LDA(latent dirtchlet allocation)** 이란 지도 학습에서 적용되는 차원 축소 기법이며 입력 데이터의 정답을 최대한 분리할 수 있는 축을 찾는 기법입니다
+
+**LSA(Latent Semantic Analysis)** 는 잠재 의미 분석을 뜻하며, 주로 토픽 모델링에 자주 사용되는 기법입니다. LSA는 DTM(Document-Term Matrix)이나 TF-IDF(Term Frequency-Inverse Document Frequency)행렬에 Truncated SVD를 적용하여 차원을 축소시키고, 단어들의 잠재적인 의미를 이끌어냅니다.
+
+**SVD** 는 PCA와 유사한 행렬 분해 기법을 사용하나 정방행렬을 분해하는 PCA와 달리 행과 열의 크기가 다른 행렬에도 적용할 수 있습니다. 
+
 ### #8  
+
+**keyword** : 날씨
+
+내일의 날씨를 예측해야 할 때, 오늘의 날씨 상태만을 가지고서 확률적으로 예측을 하는 방법이에요.
+
+마르코프 체인(Markov chain)의 정의란 마르코프 성질을 가진 이산 확률 과정을 뜻합니다. 여기서 마르코프 성질은 '특정 상태의 확률은 오직 과거의 상태에 의존한다'라는 것 입니다.
+
+![](https://i.imgur.com/2HVWWFJ.png)
