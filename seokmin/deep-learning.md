@@ -2,24 +2,19 @@
 
 ## Questions  
 * [딥러닝은 무엇인가요? 딥러닝과 머신러닝의 차이는?](#1)  
-
 * [Cost Function과 Activation Function은 무엇인가요?](#2)  
-
 * [Tensorflow, PyTorch 특징과 차이가 뭘까요?](#3)  
-
 * [Data Normalization은 무엇이고 왜 필요한가요?](#4)  
-
 * [알고 있는 Activation Function에 대해 알려주세요.](#5)
-
 * [오버피팅일 경우 어떻게 대처해야 할까요?](#6)
-
 * [하이퍼 파라미터는 무엇인가요?](#7)
-
 * [Weight Initialization 방법에 대해 말해주세요. 그리고 무엇을 많이 사용하나요?](#8)
+* [볼츠만 머신은 무엇인가요?](#9)
+* [TF, PyTorch 등을 사용할 때 디버깅 노하우는?](#10)
 
-  
 
-  
+
+
 
 ## Answers  
 ### #1
@@ -79,3 +74,12 @@ ref
 
 https://blog.naver.com/PostView.naver?blogId=handuelly&logNo=221831940317&parentCategoryNo=&categoryNo=31&viewDate=&isShowPopularPosts=true&from=search
 
+
+
+### #9
+
+확률적으로 순환하는 신경망 네트워크
+
+DNN, CNN, RNN같은 deterministic model들과 다른 목표를 가지고 있다. Deterministic model들은 타겟과 가설 간의 차이를 줄여서 오차를 줄이는 것을 목표.., generative model (RBM)의 목표는 확률밀도함수를 모델링하는 데에 목적을 두고 있다.
+
+### #10
