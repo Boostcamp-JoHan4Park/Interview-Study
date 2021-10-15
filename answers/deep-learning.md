@@ -10,8 +10,9 @@
 - [오버피팅일 경우 어떻게 대처해야 할까요?](#6)
 - [하이퍼 파라미터는 무엇인가요?](#7)
 - [Weight Initialization 방법에 대해 말해주세요. 그리고 무엇을 많이 사용하나요?](#8)
-- [볼츠만 머신은 무엇인가요?](#9)  
-- [TF, PyTorch 등을 사용할 때 디버깅 노하우는?](#10)  
+- [볼츠만 머신은 무엇인가요?](#9)
+- [TF, PyTorch 등을 사용할 때 디버깅 노하우는?](#10)
+
 ## Answers
 
 ### #1
@@ -121,6 +122,11 @@ Data Normalization은 입력 data의 scale(규모, 폭)을 0~1 사이로 비슷�
 
 ### #8
 
-### #9  
+**keyword** : 확률분포, 분산 조정
 
-### #10  
+확률분포를 기반으로 하는 UniformDistribution, NormalDistribution, 확률분포와 분산을 동적으로 고려하는 분산 조정 기법인 Lecun, Xavier, He 방법이 있습니다.
+Activation function이 tanh, sigmoid류일 경우 Xavier를, ReLU류일 경우 He를 주로 사용합니다.
+
+### #9
+
+### #10
