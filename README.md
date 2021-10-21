@@ -120,6 +120,8 @@
 * p-value를 모르는 사람에게 설명한다면 어떻게 설명하실 건가요?  
 * R square의 의미는 무엇인가요?  
 * 평균(mean)과 중앙값(median)중에 어떤 케이스에서 뭐를 써야할까요?  
+* 중심극한정리는 왜 유용한걸까요?  
+* 엔트로피(entropy)에 대해 설명해주세요. 가능하면 Information Gain도요.  
 
 ### [Deep Learning](./answers/deep-learning.md)  
 
@@ -133,6 +135,12 @@
 * Weight Initialization 방법에 대해 말해주세요. 그리고 무엇을 많이 사용하나요?  
 * 볼츠만 머신은 무엇인가요?  
 * TF, PyTorch 등을 사용할 때 디버깅 노하우는?  
+* 뉴럴넷의 가장 큰 단점은 무엇인가? 이를 위해 나온 One-Shot Learning은 무엇인가?  
+* 요즘 Sigmoid 보다 ReLU를 많이 쓰는데 그 이유는?  
+  * Non-Linearity라는 말의 의미와 그 필요성은?  
+  * ReLU로 어떻게 곡선 함수를 근사하나?  
+  * ReLU의 문제점은?  
+  * Bias는 왜 있는걸까?  
 
 ### [Machine Learning](./answers/machine-learning.md)  
 
@@ -146,6 +154,8 @@
 * Markov Chain을 고등학생에게 설명하려면 어떤 방식이 제일 좋을까요?  
 * 텍스트 더미에서 주제를 추출해야 합니다. 어떤 방식으로 접근해 나가시겠나요?  
 * SVM은 왜 반대로 차원을 확장시키는 방식으로 동작할까요? SVM은 왜 좋을까요?  
+* 다른 좋은 머신 러닝 대비, 오래된 기법인 나이브 베이즈(naive bayes)의 장점을 옹호해보세요.  
+* 회귀 / 분류시 알맞은 metric은 무엇일까?  
 
 <br>
 
