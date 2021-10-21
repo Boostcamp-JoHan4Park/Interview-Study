@@ -63,7 +63,7 @@
 ### 신뢰 구간(Confidence Interval;CI)의 정의는 무엇인가요?
 
 Keyword: 모수, 예측범위
-Answer: 내가 추출한 표본평균이 관측될만한 범위
+Answer: 내가 추출한 표본평균이 관측될만한 범위, 모수가 실제로 포함될 것으로 예측되는 범위
 
 - 모수가 실제로 포함될 것으로 예측되는 범위 --> 내가 추출한 표본평균이 이 범위에 ~% 확률로 들어온다
 - 집단 전체를 연구하는 것은 불가능하므로, 샘플링된 데이터를 기반으로 모수의 범위를 추정하기 위해 사용됨  
@@ -81,20 +81,47 @@ Answer: 귀무가설을 전제로, 그 가설이 맞는다는 가정 하에, 표
 - 귀무가설(null hypothesis, H0)이 맞다는 전제 하에, 통계값(statistics)이 실제로 관측된 값 이상일 확률을 의미  
   혹은, 귀무가설(Null hypothesis)이 맞는다고 가정할 때 얻은 결과보다 극단적인 결과(관측 결과)가 나타날 확률
 
-  - 귀무가설: 새로운 사실은 없다라는 가정
+- 귀무가설: 새로운 사실은 없다라는 가정
 
 - 참고: https://www.insilicogen.com/blog/341  
   https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=hsj2864&logNo=221225950532
+  https://data-make.tistory.com/114
+  https://datascienceschool.net/02%20mathematics/09.04%20%EA%B2%80%EC%A0%95%EA%B3%BC%20%EC%9C%A0%EC%9D%98%ED%99%95%EB%A5%A0.html#:~:text=%EC%9C%A0%EC%9D%98%ED%99%95%EB%A5%A0%EC%9D%80%20%ED%99%95%EB%A5%A0%EB%B6%84%ED%8F%AC,%ED%95%98%EB%8A%94%20%EC%98%81%EC%97%AD%EC%9D%98%20%EB%A9%B4%EC%A0%81%EC%9D%B4%EB%8B%A4
 
----
+### R square의 의미는 무엇인가요?
+
+Keyword:
+Answer: Regression line이 어떻게 그려지냐에 따라 data의 성질을 잘 표현하는지 아닌지
+
+- 참고: https://heung-bae-lee.github.io/2020/01/09/machine_learning_03/
 
 ### 평균(mean)과 중앙값(median)중에 어떤 케이스에서 뭐를 써야할까요?
 
-값이 한쪽으로 치우친 경우 평균도 왜곡될 가능성이 있어서 중앙값을 씀
-보통은 중앙값 계산하는게 프로그래밍적으로 복잡해서 평균을 쓸듯?
+Keyword: Outlier
+Answer: 값이 한쪽으로 치우친 경우 평균도 왜곡될 가능성이 있어서 중앙값을 씀
 중앙값은 관측값들의 변화에 민감하지 않고, outlier에 영향받지 않음
+
+### 중심극한정리는 왜 유용한걸까요?
+
+Keyword: 표본평균의 분포가 정규분포
+Answer: 중심극한정리를 통해 모집단이 어떤 분포를 갖고있든 표본의 크기가 충분히 크다면, 표본평균의 분포는 정규분포를 이룬다는 점을 이용해 특정 사건(내가 수집한 표본의 평균)이 일어날 확률값을 계산할 수 있습니다
+
+- 표본평균분포(Sampling distribution of sample mean): 모집단에서 표본크기가 n인 표본을 여러번 반복해서 추출했을때, 각각 표본 평균들이 이루는 분포  
+  표본크기 n이 커질수록 표본 평균들이 이루는 분포가 '평균이 $\mu$고 표준편차가 $\sigma /\sqrt{n}$인 정규분포'에 가까워짐
+
+- 중심극한정리(Central limit theorem): 모집단이 '평균이 $\mu$고 표준편차가 $\sigma$인 임의의 분포'를 이룬다고 할 때,  
+  이 모집단으로부터 추출된 표본의'표본의 크기 n이 충분히 크다'면 표본 평균들이 이루는 분포는 '평균이 $\mu$고 표준편차가 $\sigma /\sqrt{n}$인 정규분포'에 근접한다
+
+- 중심극한정리를 통해 모집단이 어떤 분포를 갖고있든 표본의 크기가 충분히 크다면, 표본평균의 분포는 정규분포를 이룬다는 점을 이용해 특정 사건(내가 수집한 표본의 평균)이 일어날 확률값을 계산할 수 있음
+
+- 참고: https://drhongdatanote.tistory.com/57
+
+![](https://images.velog.io/images/hanlyang0522/post/5aa967d6-ba90-4957-b38f-874e2ea7fde0/image.png)
 
 ### 엔트로피(entropy)에 대해 설명해주세요. 가능하면 Information Gain도요.
 
-entropy: sample의 purity를 보여줌
-info gain: 전체 S가 특징 A에 의해 구분된 후 감소된 entropy, 클수록 구분을 잘한다
+Keyword: Purity  
+Answer: Entropy는 0~1 사이의 값으로 주어진 데이터 집합의 혼잡도를 의미하며, information gain은 어떤 속성을 선택함으로써 얻게되는 entropy 감소량을 말합니다.
+
+- entropy: sample의 purity를 보여줌
+- info gain: 전체 S가 특징 A에 의해 구분된 후 감소된 entropy, 클수록 구분을 잘한다

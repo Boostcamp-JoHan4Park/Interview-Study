@@ -86,16 +86,48 @@ Keyword: Gaussian sampling, LeCun init, Xavier init, He init
 Answer: Gaussian sampling하거나, 이전 node 수에 영향을 받는 LeCun init, 다음 node 수에도 영향을 받고 uniform/normal 분포를 따르는 Xavier init, He init 등이 있다  
 Activation function이 sigmoid, tanh일 경우 Xavier init을, ReLU일 경우 He init을 사용함
 
----
+- Gaussian: normal distribution
+
+### 볼츠만 머신은 무엇인가요?
+
+Keyword:
+Answer: 볼츠만 머신(Boltzmann machine)은 볼 수 있는 층(visible layer)과 숨겨진 층(hidden layer)의 두 층으로 구성된 그래픽 모델  
+이 모델에서 각 볼 수 있는 유닛은 숨겨진 유닛들과만 연결되고, 볼 수 있는 유닛들 사이에 그리고 숨겨진 유닛들 사이에는 서로 연결이 없을 때 이를 제한된 볼츠만 머신(RBM: restricted Boltzmann machine)이라 한다
+
+### TF, PyTorch 등을 사용할 때 디버깅 노하우는?
+
+Keyword:
+Answer:
+
+### 뉴럴넷의 가장 큰 단점은 무엇인가? 이를 위해 나온 One-Shot Learning은 무엇인가?
+
+Keyword: Distance 기반 learning
+Answer: Neural network의 가장 큰 단점은 data의 수가 적을 경우 사용하지 못한다는 점입니다. One-Shot Learning은 이를 개선하기 위해 각 class마다 1개의 image만 사용하고 input image를 각 class별 거리를 측정해 가장 가까운 class로 판정하는 기법입니다.
+
+- Neural network의 단점은 data의 수가 적을 경우 사용하지 못한다는 점
+
+- One-shot learning은 class당 1개의 image만 있고, input image를 각 class별 distance를 측정해 가장 가까운 class로 판별
 
 ### 요즘 Sigmoid 보다 ReLU를 많이 쓰는데 그 이유는?
 
+- Non-Linearity라는 말의 의미와 그 필요성은?
+- ReLU로 어떻게 곡선 함수를 근사하나? \*\*\* 사실 잘 모르겟슴.,,
+- ReLU의 문제점은?
+- Bias는 왜 있는걸까?
+
+Keyword: Gradient vanishing
+Answer: Gradient vanishing 문제를 해결했기 때문에
+
+1. Non-linearity: 데이터가 복잡해지고, feature들의 차원이 증가하면서 데이터의 분포가 선형적이지 않고 비선형적으로 나타나면서 단순한 선형의 boundary로는 표현이 불가능하기 때문에 비선형의 boundary가 필요하기 때문에 non-linear가 필요  
+   Linear function은 logistic regression과 동일하게 계산돼 복잡한 연산을 담을 수 없음
+
+2. 함수를 근사 == 함수를 추정하여 동일한 input을 넣었을 때 output이 유사하게 나오도록 조정하는 과정  
+   ReLU는 선형(y=x)과 비선형(y=0)의 결합이기 때문에 ReLU가 반복 적용되면 선형부분의 결합으로 곡선 함수를 표현할 수 있음
+
+3. input이 0보다 작을 경우 gradient가 0이 된다
+
+4. 모델이 항상 원점을 기준으로 분포해있지는 않기 때문에 model이 data에 잘 fit하게 평행이동 시켜줌
+
 - Sigmoid는 값을 0~1 사이로 mapping 시켜서 모델이 깊어지면 0~1 사이의 값이 계속 곱해져 결국은 gradient vanishing이 일어나게 됨
-- ReLU는 값이 0보다 클 경우 그대로 by-pass하기 때문에 값 유지가 가능
+- ReLU는 값이 0보다 클 경우 그대로 by-pass하기 때문에 값 유지가 가능  
   또한 단순히 입력값을 그대로 출력으로 내보내기 때문에 시그모이드 함수에 비해 계산 속도가 빠르다.
-
-### Non-Linearity라는 말의 의미와 그 필요성은?
-
-- 데이터가 복잡해지고, feature들의 차원이 증가하면서 데이터의 분포가 선형적이지 않고 비선형적으로 나타나면서 단순한 선형의 boundary로는 표현이 불가능하기 때문에 비선형의 boundary가 필요하기 때문에 non-linear가 필요합니다.
-  Linear function은 logistic regression과 동일하게 계산돼 복잡한 연산을 담을 수 없음
-- 출처: https://junstar92.tistory.com/122 [별준 코딩]

@@ -54,14 +54,54 @@ LDA는 LSA의 단점을 개선하여 탄생한 알고리즘으로 토픽 모델�
 
 - 직교행렬(orthogonal matrix): 자신과 자신의 전치 행렬(transposed matrix)의 곱 또는 이를 반대로 곱한 결과가 단위행렬(identity matrix)이 되는 행렬
 - 대각행렬(diagonal matrix): 주대각선을 제외한 곳의 원소가 모두 0인 행렬
+- LDA는 축을 찾는 기법
 
 - 참고: https://wikidocs.net/24949
 
 ### Markov Chain을 고등학생에게 설명하려면 어떤 방식이 제일 좋을까요?
 
-Keyword: 마르코프 성질, 이산시간, 확률과정  
-Answer: Markov Chain은 마르코프 성질을 가진 이산시간(discrete time) 확률과정(stochastic process)을 뜻하며,  
-마르코프 성질은 ‘과거 상태가 미래 상태에 전혀 영향을 미치지 않고, 오로지 현재 상태만 미래 상태에 영향을 미친다’라는 의미
+Keyword: 오늘 날씨, 어제 날씨  
+Answer: 어제 날씨를 보고 오늘 날씨를 맞추듯, 바로 방금 전 상태만 보고 현재 상태를 맞추는 형태
+
+- Markov Chain은 마르코프 성질을 가진 이산시간(discrete time) 확률과정(stochastic process)을 뜻하며,  
+  마르코프 성질은 ‘과거 상태가 미래 상태에 전혀 영향을 미치지 않고, 오로지 현재 상태만 미래 상태에 영향을 미친다’라는 의미
+
+### 텍스트 더미에서 주제를 추출해야 합니다. 어떤 방식으로 접근해 나가시겠나요?
+
+Keyword: 잠재 디리클레 할당(Latent Dirichlet Allocation, LDA)
+Answer:
+
+- 참고: https://huidea.tistory.com/130
+
+### SVM은 왜 반대로 차원을 확장시키는 방식으로 동작할까요? SVM은 왜 좋을까요?
+
+Keyword:
+Answer: Support Vector Machine(SVM)은 원 훈련(또는 학습)데이터를 비선형 매핑(Mapping)을 통해 고차원으로 변환
+
+### 다른 좋은 머신 러닝 대비, 오래된 기법인 나이브 베이즈(naive bayes)의 장점을 옹호해보세요.
+
+Keyword: Supervised Learning, 적은 train set
+Answer: Supervised Learning에서 매우 효율적이며, 분류에 필요한 파라미터를 추정하기 위한 트레이닝 데이터의 양이 매우 적다
+
+- 나이브 베이즈 분류는 베이즈 정리에 기반한 통계적 분류 기법, 가장 단순한 지도 학습 (supervised learning) 중 하나  
+  나이브 베이즈 분류기는 빠르고, 정확하며, 믿을만한 알고리즘. 정확성도 높고 대용량 데이터에 대해 속도도 빠름.
+
+### 회귀 / 분류시 알맞은 metric은 무엇일까?
+
+Keyword:
+Answer: 회귀엔 MSE, MAE, R2를 사용하고 분류엔 accuracy, precision, recall과 이를 조합한 F1 score를 사용
+
+- RSS: 단순 오차 제곱 합
+- MSE: L2 score, RSS의 평균
+- MAE: L1 score, MSE보다 outlier에 robust
+- RMSE: MSE에 루트 씌워서 outlier
+- R2: 결정계수, 1-(RSS/전체 분산), 회귀 모델의 설명력을 표현하는 지표, 잘 예측할수록 1에 가까워짐
+
+- Accuracy: (TP+TN) / (TP+TN+FP+FN), 분류 결과가 얼마나 True로 나왔느냐
+- Precision: TP/(TP+FP), ‘모델이 P라고 분류한 데이터 중에서’ 실제로 P인 데이터의 비율
+- Recall: TP/(TP+FN), ‘실제 P인 데이터 중에서’ 모델이 P라고 잘 예측한 데이터의 비율
+- FPR: FP/(FP+TN), False Positive Rate, 실제로 N인 데이터 중에서 모델이 P라고 잘못 분류한 데이터의 비율
+- F1 score: 정밀도와 재현율의 가중 조화평균
 
 ---
 
