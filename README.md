@@ -1,4 +1,14 @@
 # Interview  
+<div align="center"> 
+    <img src="logo.png" alt="logo"/>
+    <br/>
+    <a href="https://hits.seeyoufarm.com"><img src="https://i.imgur.com/ul7uF4g.png"/></a>
+    <img src="https://img.shields.io/github/forks/Boostcamp-JoHan4Park/Interview-Study" alt="forks"/>
+    <img src="https://img.shields.io/github/stars/Boostcamp-JoHan4Park/Interview-Study?color=yellow" alt="stars"/>
+    <img src="https://img.shields.io/github/issues-pr/Boostcamp-JoHan4Park/Interview-Study?color=red" alt="pr"/>
+    <img src="https://img.shields.io/github/license/Boostcamp-JoHan4Park/Interview-Study" alt="license"/>
+</div>
+
 
 ## Team Member  🙋‍ 🙋‍♂️ 
 
