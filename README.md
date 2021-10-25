@@ -131,6 +131,8 @@
 * 평균(mean)과 중앙값(median)중에 어떤 케이스에서 뭐를 써야할까요?  
 * 중심극한정리는 왜 유용한걸까요?  
 * 엔트로피(entropy)에 대해 설명해주세요. 가능하면 Information Gain도요.  
+* 어떨 때 모수적 방법론을 쓸 수 있고, 어떨 때 비모수적 방법론을 쓸 수 있나요?  
+* “likelihood”와 “probability”의 차이는 무엇일까요?  
 
 ### [Deep Learning](./answers/deep-learning.md)  
 
@@ -150,6 +152,10 @@
   * ReLU로 어떻게 곡선 함수를 근사하나?  
   * ReLU의 문제점은?  
   * Bias는 왜 있는걸까?  
+* Gradient Descent에 대해서 쉽게 설명한다면?  
+  * 왜 꼭 Gradient를 써야 할까? 그 그래프에서 가로축과 세로축 각각은 무엇인가? 실제 상황에서는 그 그래프가 어떻게 그려질까?  
+  * GD 중에 때때로 Loss가 증가하는 이유는?  
+  * Back Propagation에 대해서 쉽게 설명 한다면?  
 
 ### [Machine Learning](./answers/machine-learning.md)  
 
@@ -165,6 +171,8 @@
 * SVM은 왜 반대로 차원을 확장시키는 방식으로 동작할까요? SVM은 왜 좋을까요?  
 * 다른 좋은 머신 러닝 대비, 오래된 기법인 나이브 베이즈(naive bayes)의 장점을 옹호해보세요.  
 * 회귀 / 분류시 알맞은 metric은 무엇일까?  
+* Association Rule의 Support, Confidence, Lift에 대해 설명해주세요.  
+* 최적화 기법중 Newton’s Method와 Gradient Descent 방법에 대해 알고 있나요?  
 
 <br>
 

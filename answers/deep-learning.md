@@ -12,6 +12,8 @@
 - [Weight Initialization 방법에 대해 말해주세요. 그리고 무엇을 많이 사용하나요?](#8)
 - [볼츠만 머신은 무엇인가요?](#9)
 - [TF, PyTorch 등을 사용할 때 디버깅 노하우는?](#10)
+- [뉴럴넷의 가장 큰 단점은 무엇인가? 이를 위해 나온 One-Shot Learning은 무엇인가?](#11)  
+- [요즘 Sigmoid 보다 ReLU를 많이 쓰는데 그 이유는?](#12)  
 
 ## Answers
 
@@ -130,3 +132,7 @@ Activation function이 tanh, sigmoid류일 경우 Xavier를, ReLU류일 경우 H
 ### #9
 
 ### #10
+
+### #11  
+
+### #12  
