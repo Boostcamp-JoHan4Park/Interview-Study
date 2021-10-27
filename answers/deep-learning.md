@@ -135,4 +135,6 @@ Activation function이 tanh, sigmoid류일 경우 Xavier를, ReLU류일 경우 H
 
 ### #11  
 
+**keyword** : 데이터가 많다, pretrained  
+Neural net의 가장 큰 단점은 데이터가 많아야 학습이 잘 된다는 점이다. 현실에서는 이 부분이 어려워서 대량의 data로 pretrained 된 모델을 이용해서 새로운 data(1개)를 주더라도 좋은 성능을 내는것을 one-shot learning이라고 한다.  
 ### #12  
