@@ -1,20 +1,39 @@
 # Machine Learning  
 
 ## Questions  
+
 * [알고 있는 metric에 대해 설명해주세요. (ex. RMSE, MAE, recall, precision ...)](#1)  
+
 * [정규화를 왜 해야할까요? 정규화의 방법은 무엇이 있나요?](#2)  
+
 * [Local Minima와 Global Minima에 대해 설명해주세요.](#3)  
+
 * [차원의 저주에 대해 설명해주세요.](#4)  
+
 * [dimension reduction기법으로 보통 어떤 것들이 있나요?](#5)
+
 * [PCA는 차원 축소 기법이면서, 데이터 압축 기법이기도 하고, 노이즈 제거기법이기도 합니다. 왜 그런지 설명해주실 수 있나요?](#6)
+
 * [LSA, LDA, SVD 등의 약자들이 어떤 뜻이고 서로 어떤 관계를 가지는지 설명할 수 있나요?](#7)
+
 * [Markov Chain을 고등학생에게 설명하려면 어떤 방식이 제일 좋을까요?](#8)
+
 * [텍스트 더미에서 주제를 추출해야 합니다. 어떤 방식으로 접근해 나가시겠나요?](#9)
+
 * [SVM은 왜 반대로 차원을 확장시키는 방식으로 동작할까요? SVM은 왜 좋을까요?](#10)
+
 * [다른 좋은 머신 러닝 대비, 오래된 기법인 나이브 베이즈(naive bayes)의 장점을 옹호해보세요.](#11)
+
 * [회귀 / 분류시 알맞은 metric은 무엇일까?](#12)
 
+* [Association Rule의 Support, Confidence, Lift에 대해 설명해주세요.](#13)
+
+* [최적화 기법중 Newton’s Method와 Gradient Descent 방법에 대해 알고 있나요?](#14)
+
+  
+
 ## Answers
+
 ### #1
 
 **Keyword** : MSE : 오차 제곱의 합의 평균 / 이상치를 잡아내는데 효과적
@@ -148,4 +167,44 @@ computation cost가 작아 큰 데이터셋에 적합
 회귀 : MSE MAE 등이 있습니다. 오차 제곱 합, 오차 절댓값 합
 
 분류 : acc, f1.. 등의 confusion matrix 지표를 사용합니다
+
+
+
+### #13
+
+associtaion rule : 비지도학습으로서, label이 없는 상태에서 데이터에 숨겨진 패턴을 찾는 분석기법 / 사건이 얼마나 자주 함께 발생하는지를 측정할 수 있는 3가지 척도로 support, confidence, lift가 있다.
+
+
+
+support  : 전체 경우의 수에서 두 아이템이 같이 나오는 비율
+
+![support](./img/support.png)
+
+
+
+confidence : X가 나온 경우 중 X와 Y가 함께 나올 비율
+
+![confidence](./img/confidence.png)
+
+
+
+lift : X와 Y가 같이 나오는 비율을 X가 나올 비율과 Y가 나올 비율의 곱으로 나눈 값
+
+![lift](./img/lift.png)
+
+
+
+ref 
+
+https://dodonam.tistory.com/167
+
+https://process-mining.tistory.com/34
+
+
+
+### #14
+
+두 방법 모두 함수를 최적화하는 기법입니다.
+
+GD는 학습률을 정해주는 반면에, newton's method는  1차, 2차 미분값을 이용하여 최적화를 진행합니다. 
 
