@@ -85,6 +85,7 @@ Answer: Supervised Learning에서 매우 효율적이며, 분류에 필요한 �
 
 - 나이브 베이즈 분류는 베이즈 정리에 기반한 통계적 분류 기법, 가장 단순한 지도 학습 (supervised learning) 중 하나  
   나이브 베이즈 분류기는 빠르고, 정확하며, 믿을만한 알고리즘. 정확성도 높고 대용량 데이터에 대해 속도도 빠름.
+  N-gram
 
 ### 회귀 / 분류시 알맞은 metric은 무엇일까?
 
@@ -109,3 +110,21 @@ Answer: 회귀엔 MSE, MAE, R2를 사용하고 분류엔 accuracy, precision, re
 
 - 데이터의 패턴을 잘 학습한 모델 --> robust한 모델?
 - outlier를 잘 걸러내고, 새로운 data에 대해서도 성능이 좋은 모델?
+
+### Association Rule의 Support, Confidence, Lift에 대해 설명해주세요.
+
+Keyword:
+Answer: Support: 전체 경우의 수에서 두 아이템이 같이 나오는 비율
+Confidence: X가 나온 경우 중 X와 Y가 함께 나올 비율
+Lift: X와 Y가 같이 나오는 비율을 X가 나올 비율과 Y가 나올 비율의 곱으로 나눈 값
+1보다 높을 때 positive correlation, 1일때 independent, 1 미만일 때 negatively correlation
+
+- Assiciation rule: 어떤 사건이 얼마나 자주 함께 발생하는지, 서로 얼마나 연관돼있는지 표시하는 것
+
+- 참고: https://process-mining.tistory.com/34
+
+### 최적화 기법중 Newton’s Method와 Gradient Descent 방법에 대해 알고 있나요?
+
+Keyword:
+Answer: Newton's method: 방정식 f(x)=0의 해를 근사적으로 찾는 기법
+Gradient Descent: f'(x) = 0이 되는 점을 찾는 기법

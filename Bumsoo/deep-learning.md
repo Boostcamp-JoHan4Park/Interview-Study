@@ -131,3 +131,13 @@ Answer: Gradient vanishing 문제를 해결했기 때문에
 - Sigmoid는 값을 0~1 사이로 mapping 시켜서 모델이 깊어지면 0~1 사이의 값이 계속 곱해져 결국은 gradient vanishing이 일어나게 됨
 - ReLU는 값이 0보다 클 경우 그대로 by-pass하기 때문에 값 유지가 가능  
   또한 단순히 입력값을 그대로 출력으로 내보내기 때문에 시그모이드 함수에 비해 계산 속도가 빠르다.
+
+### GD 중에 때때로 Loss가 증가하는 이유는?
+
+Keyword: learning rate  
+Answer: learning rate가 커서 순간적으로 발산하거나, local minimum을 빠져나오기 때문?
+
+### Back Propagation에 대해서 쉽게 설명 한다면?
+
+Keyword: loss update  
+Answer: Ground truth와 estimated output의 차이가 얼마나 나는지 구한 후 오차loss만큼 weight를 업데이트
