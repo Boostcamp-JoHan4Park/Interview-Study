@@ -133,6 +133,9 @@
 * 엔트로피(entropy)에 대해 설명해주세요. 가능하면 Information Gain도요.  
 * 어떨 때 모수적 방법론을 쓸 수 있고, 어떨 때 비모수적 방법론을 쓸 수 있나요?  
 * “likelihood”와 “probability”의 차이는 무엇일까요?  
+* 통계에서 사용되는 bootstrap의 의미는 무엇인가요.  
+* 모수가 매우 적은 (수십개 이하) 케이스의 경우 어떤 방식으로 예측 모델을 수립할 수 있을까요?  
+* 베이지안과 프리퀀티스트 간의 입장차이를 설명해주실 수 있나요?  
 
 ### [Deep Learning](./answers/deep-learning.md)  
 
@@ -156,6 +159,13 @@
   * 왜 꼭 Gradient를 써야 할까? 그 그래프에서 가로축과 세로축 각각은 무엇인가? 실제 상황에서는 그 그래프가 어떻게 그려질까?  
   * GD 중에 때때로 Loss가 증가하는 이유는?  
   * Back Propagation에 대해서 쉽게 설명 한다면?  
+* Local Minima 문제에도 불구하고 딥러닝이 잘 되는 이유는?  
+  * GD가 Local Minima 문제를 피하는 방법은?  
+  * 찾은 해가 Global Minimum인지 아닌지 알 수 있는 방법은?  
+* Training 세트와 Test 세트를 분리하는 이유는?  
+  * Validation 세트가 따로 있는 이유는?  
+  * Test 세트가 오염되었다는 말의 뜻은?  
+  * Regularization이란 무엇인가?  
 
 ### [Machine Learning](./answers/machine-learning.md)  
 
@@ -173,6 +183,9 @@
 * 회귀 / 분류시 알맞은 metric은 무엇일까?  
 * Association Rule의 Support, Confidence, Lift에 대해 설명해주세요.  
 * 최적화 기법중 Newton’s Method와 Gradient Descent 방법에 대해 알고 있나요?  
+* 머신러닝(machine)적 접근방법과 통계(statistics)적 접근방법의 둘간에 차이에 대한 견해가 있나요?  
+* 인공신경망(deep learning이전의 전통적인)이 가지는 일반적인 문제점은 무엇일까요?  
+* 지금 나오고 있는 deep learning 계열의 혁신의 근간은 무엇이라고 생각하시나요?  
 
 <br>
 
