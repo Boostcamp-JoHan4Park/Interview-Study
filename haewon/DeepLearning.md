@@ -20,6 +20,13 @@
     왜 꼭 Gradient를 써야 할까? 그 그래프에서 가로축과 세로축 각각은 무엇인가? 실제 상황에서는 그 그래프가 어떻게 그려질까?
     GD 중에 때때로 Loss가 증가하는 이유는?
     Back Propagation에 대해서 쉽게 설명 한다면?](#13)
+* [Local Minima 문제에도 불구하고 딥러닝이 잘 되는 이유는?
+    GD가 Local Minima 문제를 피하는 방법은?
+    찾은 해가 Global Minimum인지 아닌지 알 수 있는 방법은?](#14)
+* [Training 세트와 Test 세트를 분리하는 이유는?
+    Validation 세트가 따로 있는 이유는?
+    Test 세트가 오염되었다는 말의 뜻은?
+    Regularization이란 무엇인가?](#15)
 
 
 ## Answers  
@@ -91,3 +98,16 @@ Boltzmann Machine은 마르코프 모델의 일종으로, visible layer와 hidde
 - GD중 local minimum에 빠졌다가 나오는 순간 때때로 loss가 증가하게 된다.  
 - Back Propagation이란, 궁극적으로 예측값과 실제값의 오차에 관여하는 모든 노드들의 weight와 bias를 수정하는 것으로, 이때 오차를 줄이는 방향으로 반복적으로 수정하게 됩니다.   
 역전파는 순전파와 반대로 출력층에서 입력층 방향으로 loss애 대한 입력값의 기울기를 계산하며 가중치를 업데이트 합니다. 이 과정에서 chain rule이 사용되게 됩니다.   
+
+### #14
+Local Minima 문제에도 불구하고 딥러닝이 잘 되는 이유
+- local Minima문제를 해결할 수 있는 Optimizer들이 많이 나왔기 때문
+  - GD가 Local Minima 문제를 피하기 위해서는 Momentum 사용(Momentum, RMSprop, Adam등)  
+  Momentum은 이전의 방향을 기억하여 관성처럼 추가적인 이동을 하기에 학습속도를 빠르게 하고, local minima를 벗어나게 도와줌
+- weight와 bias를 잘 초기화 시키는 weight initialization 방법들이 나왔기 때문
+찾은 해가 Global Minimum인지 아닌지 알 수 있는 방법은 모르겠....weight initialize를 다르게 여러번 한 후 확인하기?
+### #15
+- Training 세트와 Test 세트를 분리하는 이유는 오버피팅을 방지하기 위해서 이다. 현실세계에서는 처음보는 이미지에 대해서도 모델이 잘 작동해야하고, 모델이 잘 학습되었는지 성능을 판단하기 위해서 학습 시 보지 못했던 이미지로 테스트 하기 위해 train과 test데이터를 나누게 됩니다. 
+- Validation 세트는 데이터를 traing하는 과정에서 train이 잘 되고 있는지 확인하고 검증하며 파라미터 튜닝을 하기 위해서 존재합니다. 
+- Test 세트가 오염되었다는 말은 test 세트가 train 세트가 비슷하다는 뜻입니다. test데이터가 train데이터와 비슷할 시 제대로 된 모델 성능 평가를 할 수 없기 때문이다. 
+- Regularization이란 overfitting을 방지하기 위해 모델이 학습이 잘 안되도록 모델에 일부러 제약을 주는 테크닉을 추가해서 처음 보는 데이터와 실환경에서도 잘 작동되도록 하는 것이다. 
