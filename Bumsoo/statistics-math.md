@@ -148,3 +148,32 @@ Answer: 확률probability은 어떤 시행(trial, experiment)에서 특정 결�
 우도likelihood는 어떤 시행(trial, experiment)을 충분히 수행한 뒤 그 결과(sample)를 토대로 경우의 수의 가능성을 도출하는 것. 아무리 충분히 수행해도 어디까지나 추론(inference)이기 때문에 가능성의 합이 1이 되지 않을 수도 있다.
 
 - 참고: https://yjam.tistory.com/38
+
+### 통계에서 사용되는 bootstrap의 의미는 무엇인가요.
+
+Keyword: 복원 추출, 모수 추정
+Answer: 현재 있는 표본에서 추가적으로 표본을 복원 추출하고 각 표본에 대한 통계량을 다시 계산해 모수의 분포를 정확하게 추정함
+
+- 부트스트랩: 현재 있는 표본에서 추가적으로 표본을 복원 추출하고 각 표본에 대한 통계량을 다시 계산하는 것
+- Bootstrap aggregating (Bagging)이란, 하나의 original data가 있을 때, B번의 bootstrap sampling을 통해 B개의 데이터를 새로 만들고, 이를 이용하여 B개의 classifier를 만들고 합치는 것을 말한다
+
+- 참고: https://bioinfoblog.tistory.com/entry/%ED%86%B5%EA%B3%84-%EA%B8%B0%EC%B4%88-Bootstrap-%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9  
+  https://bkshin.tistory.com/entry/DATA-12
+
+### 모수가 매우 적은 (수십개 이하) 케이스의 경우 어떤 방식으로 예측 모델을 수립할 수 있을까요?
+
+Keyword: 비모수 검정
+Answer: 비모수 검정을 사용한다
+
+![](https://images.velog.io/images/hanlyang0522/post/aecfaa5e-6b50-4920-ae43-638995c51ea1/image.png)
+
+- 비모수적 검정을 사용?
+
+### 베이지안과 프리퀀티스트 간의 입장차이를 설명해주실 수 있나요?
+
+Keyword: 객관과 주관의 차이
+Answer: 프리퀀티스트는 정해진 모수가 있다고 가정 후 검증하고, 베이지안은 현재까지의 관측값을 바탕으로 가정하기 때문에 새로운 데이터가 들어오면 모수를 업데이트함
+
+- 확률을 객관적으로 발생하는 현상의 빈도수에 대한 기술로 보느냐 VS 현상에 대한 관찰자의 주관적인 믿음의 체계로 보느냐
+
+- 참고: https://freshrimpsushi.github.io/posts/bayesian-paradigm/

@@ -132,12 +132,49 @@ Answer: Gradient vanishing 문제를 해결했기 때문에
 - ReLU는 값이 0보다 클 경우 그대로 by-pass하기 때문에 값 유지가 가능  
   또한 단순히 입력값을 그대로 출력으로 내보내기 때문에 시그모이드 함수에 비해 계산 속도가 빠르다.
 
-### GD 중에 때때로 Loss가 증가하는 이유는?
+### Gradient Descent에 대해서 쉽게 설명한다면?
+
+#### GD 중에 때때로 Loss가 증가하는 이유는?
 
 Keyword: learning rate  
 Answer: learning rate가 커서 순간적으로 발산하거나, local minimum을 빠져나오기 때문?
 
-### Back Propagation에 대해서 쉽게 설명 한다면?
+#### Back Propagation에 대해서 쉽게 설명 한다면?
 
 Keyword: loss update  
 Answer: Ground truth와 estimated output의 차이가 얼마나 나는지 구한 후 오차loss만큼 weight를 업데이트
+
+### Local Minima 문제에도 불구하고 딥러닝이 잘 되는 이유는?
+
+Keyword: weight initialize, pre-train
+Answer: Weight을 단순히 zero initialize하는게 아니라 activation function에 따라 적절한 초기화 방법이 등장했고, pre-training을 통해 효과적으로 학습을 시킬 수 있게 됨
+
+#### GD가 Local Minima 문제를 피하는 방법은?
+
+Keyword:
+Answer: Learning rate scheduler 등을 통해 주기적으로 lr의 크기를 변경해 local minima를 빠져나가게 할 수 있음
+
+#### 찾은 해가 Global Minimum인지 아닌지 알 수 있는 방법은?
+
+Keyword:
+Answer: 차원이 높을수록 local minima에 빠질 위험이 적기 때문에 차원을 높여서 실험, seed를 변경하며 여러번 실험한다
+
+### Training 세트와 Test 세트를 분리하는 이유는?
+
+Keyword: Overfit
+Answer: Train에서 test 세트를 학습하면 모델이 추정하는 분포가 test에 overfit해 unseen data에 대한 성능이 떨어질 위험이 있기 때문에
+
+#### Validation 세트가 따로 있는 이유는?
+
+Keyword: 모델 성능 평가
+Answer: 모델의 성능을 평가하기 위해서 사용함
+
+#### Test 세트가 오염되었다는 말의 뜻은?
+
+Keyword: 테스트 데이터 분리 실패
+Answer: 테스트용으로 분리해야하는 데이터가 학습 데이터에 반영됐을 때 사용함
+
+#### Regularization이란 무엇인가?
+
+Keyword: penalty
+Answer: L1, L2 regularization처럼 모델에 penalty를 줘서 train data에 대한 perfect fit을 포기하는 대신 testing accuracy를 높이고자 하는 기법
