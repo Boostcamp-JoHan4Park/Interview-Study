@@ -136,6 +136,8 @@
 * 통계에서 사용되는 bootstrap의 의미는 무엇인가요.  
 * 모수가 매우 적은 (수십개 이하) 케이스의 경우 어떤 방식으로 예측 모델을 수립할 수 있을까요?  
 * 베이지안과 프리퀀티스트 간의 입장차이를 설명해주실 수 있나요?  
+* 검정력(statistical power)은 무엇일까요?  
+* missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?  
 
 ### [Deep Learning](./answers/deep-learning.md)  
 
@@ -166,6 +168,10 @@
   * Validation 세트가 따로 있는 이유는?  
   * Test 세트가 오염되었다는 말의 뜻은?  
   * Regularization이란 무엇인가?  
+* Batch Normalization의 효과는?  
+  * Dropout의 효과는?  
+  * BN 적용해서 학습 이후 실제 사용시에 주의할 점은? 코드로는?  
+  * GAN에서 Generator 쪽에도 BN을 적용해도 될까?  
 
 ### [Machine Learning](./answers/machine-learning.md)  
 
@@ -186,6 +192,8 @@
 * 머신러닝(machine)적 접근방법과 통계(statistics)적 접근방법의 둘간에 차이에 대한 견해가 있나요?  
 * 인공신경망(deep learning이전의 전통적인)이 가지는 일반적인 문제점은 무엇일까요?  
 * 지금 나오고 있는 deep learning 계열의 혁신의 근간은 무엇이라고 생각하시나요?  
+* ROC 커브에 대해 설명해주실 수 있으신가요?  
+* 여러분이 서버를 100대 가지고 있습니다. 이때 인공신경망보다 Random Forest를 써야하는 이유는 뭘까요?  
 
 <br>
 
