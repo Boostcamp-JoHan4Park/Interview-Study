@@ -149,3 +149,25 @@ Answer: local minima, overfitting,
 
 Keyword:
 Answer: GPU 등 하드웨어의 발전?
+
+### ROC 커브에 대해 설명해주실 수 있으신가요?
+
+Keyword: TPR, FPR의 비율, 좌상단에 위치할수록 좋음
+Answer: 이진분류기에서 true positive rate와 false positive rate의 비율로 그래프를 그린 것으로, ROC 커브가 좌상단에 붙어있을수록 더 좋은 분류기를 의미함
+
+- ROC(Receiver Operating Characteristic) curve는 다양한 threshold에 대한 이진분류기의 성능을 한번에 표시한 것
+  이진 분류의 성능은 True Positive Rate와 False Positive Rate 두 가지를 이용해서 표현
+  좌상단에 붙어있는 커브가 더 좋은 분류기를 의미
+
+  ![](https://images.velog.io/images/hanlyang0522/post/c9257c30-3948-408f-b716-7b08aa2617e5/image.png)
+
+  ![](https://images.velog.io/images/hanlyang0522/post/108a5f79-e93a-4d41-b9ac-7794849ff5ca/image.png)
+
+- 참고 https://angeloyeo.github.io/2020/08/05/ROC.html
+
+### 여러분이 서버를 100대 가지고 있습니다. 이때 인공신경망보다 Random Forest를 써야하는 이유는 뭘까요?
+
+Keyword: Ensemble
+Answer: Random forest는 모델을 ensemble하기 때문에 여러 대의 서버에서 나온 결과를 ensemble해서 병렬적으로 처리하기 때문에 서버가 많을 경우 쓰기에 좋음?
+
+- random forest는 ensemble 모델이라 regularization이 잘 돼서?

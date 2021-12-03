@@ -163,7 +163,7 @@ Answer: 현재 있는 표본에서 추가적으로 표본을 복원 추출하고
 ### 모수가 매우 적은 (수십개 이하) 케이스의 경우 어떤 방식으로 예측 모델을 수립할 수 있을까요?
 
 Keyword: 비모수 검정
-Answer: 비모수 검정을 사용한다
+Answer: 모집단 수가 매우 적은 경우 표본평균의 분포가 정규분포를 따른다고 가정할 수 없으므로 비모수적 방법을 사용하여 예측모델을 수립
 
 ![](https://images.velog.io/images/hanlyang0522/post/aecfaa5e-6b50-4920-ae43-638995c51ea1/image.png)
 
@@ -177,3 +177,22 @@ Answer: 프리퀀티스트는 정해진 모수가 있다고 가정 후 검증하
 - 확률을 객관적으로 발생하는 현상의 빈도수에 대한 기술로 보느냐 VS 현상에 대한 관찰자의 주관적인 믿음의 체계로 보느냐
 
 - 참고: https://freshrimpsushi.github.io/posts/bayesian-paradigm/
+
+### 검정력(statistical power)은 무엇일까요?
+
+Keyword: 귀무가설을 기각
+Answer: 검정이 귀무 가설을 올바르게 기각하는 확률
+
+- 검정력(檢定力, statistical power)는 대립가설이 사실일 때, 이를 사실로서 결정할 확률
+  혹은 검정이 귀무 가설을 올바르게 기각하는 확률
+
+- 참고: https://support.minitab.com/ko-kr/minitab/19/help-and-how-to/statistics/power-and-sample-size/supporting-topics/what-is-power/  
+  https://deep-learning-study.tistory.com/91
+
+### missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?
+
+Keyword: bias, underfit
+Answer: 누락값이 많은 데이터셋으로 모델을 학습시키면 bias, underfit 등 성능에 많은 영향을 미치기 때문
+
+- 참고: https://dining-developer.tistory.com/19
+  https://subinium.github.io/missing-data-handling/

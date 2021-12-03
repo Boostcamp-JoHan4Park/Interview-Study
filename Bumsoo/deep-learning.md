@@ -178,3 +178,31 @@ Answer: 테스트용으로 분리해야하는 데이터가 학습 데이터에 �
 
 Keyword: penalty
 Answer: L1, L2 regularization처럼 모델에 penalty를 줘서 train data에 대한 perfect fit을 포기하는 대신 testing accuracy를 높이고자 하는 기법
+
+### Batch Normalization의 효과는?
+
+Keyword: 학습 속도 개선, input data의 variance 조정
+Answer: Learning rate를 높일 수 있어 학습 속도를 개선하고, 학습할 때마다 출력값을 normalize하기 때문에 weight initialize에 대한 의존성이 적어진다. 가중치의 scale을 조정해 gradient exploding/vanishing을 방지한다
+
+- 각 batch 단위로 평균과 분산을 이용해 입력 데이터의 분포의 차이(internal covariant shift)를 조정
+
+- 참고: https://eehoeskrap.tistory.com/430
+  https://m.blog.naver.com/laonple/220808903260
+
+#### Dropout의 효과는?
+
+Keyword: co-adaptation 방지, 다양한 모델 학습
+Answer: 학습 데이터에 의해 각 node들이 co-adaptation 되는 현상을 방지하고 여러 개의 모델을 학습시키는 것과 같은 작용을 해 regularization 효과를 기대할 수 있다.
+
+#### BN 적용해서 학습 이후 실제 사용시에 주의할 점은? 코드로는?
+
+Keyword: train/inference 구분, moving average 사용
+Answer: inference 시 입력되는 값을 통해 정규화를 하게 되면 모델이 학습을 통해 입력 데이터의 분포를 추정하는 의미 자체가 없어지기 때문에, inference 시에는 결과를 deterministic하게 만들기 위해 미리 저장해돈 mini-batch의 moving average를 이용해 정규화를 하게 됨.
+
+#### GAN에서 Generator 쪽에도 BN을 적용해도 될까?
+
+Keyword:
+Answer: DCGAN generator의 마지막 layer와 dicsriminator의 첫번째 layer는 모델이 distribution에 대한 정확한 mean과 scale을 학습하기 위해 BN을 적용하지 않지만, 그 외의 대부분의 layer에는 BN을 적용함
+하지만 mini-batch의 크기가 작을 경우 GAN이 생성하는 image가 z code보다 batch normalization의 fluctuation에 영향을 많이 받을 경우 batch간 correlation이 생기는 문제가 발생함.
+
+- 참고: https://kakalabblog.wordpress.com/2017/07/27/gan-tutorial-2016/
