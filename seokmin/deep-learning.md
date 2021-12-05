@@ -3,23 +3,36 @@
 ## Questions  
 
 * [딥러닝은 무엇인가요? 딥러닝과 머신러닝의 차이는?](#1)  
+
 * [Cost Function과 Activation Function은 무엇인가요?](#2)  
+
 * [Tensorflow, PyTorch 특징과 차이가 뭘까요?](#3)  
+
 * [Data Normalization은 무엇이고 왜 필요한가요?](#4)  
+
 * [알고 있는 Activation Function에 대해 알려주세요.](#5)
+
 * [오버피팅일 경우 어떻게 대처해야 할까요?](#6)
+
 * [하이퍼 파라미터는 무엇인가요?](#7)
+
 * [Weight Initialization 방법에 대해 말해주세요. 그리고 무엇을 많이 사용하나요?](#8)
+
 * [볼츠만 머신은 무엇인가요?](#9)
+
 * [TF, PyTorch 등을 사용할 때 디버깅 노하우는?](#10)
+
 * [뉴럴넷의 가장 큰 단점은 무엇인가? 이를 위해 나온 One-Shot Learning은 무엇인가?](#11)
+
 * [요즘 Sigmoid 보다 ReLU를 많이 쓰는데 그 이유는?](#12)
+
 * [Gradient Descent에 대해서 쉽게 설명한다면?](#13)
-*  
 
+* [Training 세트와 Test 세트를 분리하는 이유는?](#14)
 
+* [Batch Normalization, Drop out의 효과는?](#15)
 
-
+   
 
 ## Answers  
 
@@ -156,4 +169,48 @@ Sigmoid보다 ReLU
 
   
 
-### 
+### #14
+
+- Validation 세트가 따로 있는 이유는?
+
+  train하는 과정에서 일반화 성능을 평가하기 위해서 입니다.
+
+- Test 세트가 오염되었다는 말의 뜻은?
+
+  Test set에 노이즈가 많이 섞어있다는 의미인 것 같습니다.
+
+- Regularization이란 무엇인가?
+
+  train data에 overfitting되는 것을 방지하기 위해 사용하는 기법으로, drop out, batch normalization, augmentation, label smoothing등의 기법이 있습니다.
+
+  이와 헷갈릴 수 있는 개념으로 normalization이 있기는 합니다.. normalization은 데이터 값의 범위를 일정 범위로 scaling하기 위한 기법.. -> batch norm등이 있다..
+
+  
+
+  
+
+### #15
+
+- Batch Normalization의 효과는?
+
+  dropout과 마찬가지로.. overfitting을 방지하는 효과 + 각 batch마다 값들을 scaling하는 역할..
+
+- Dropout의 효과는?
+
+  신경망에서 일정 확률로 신경망을 끊어주는 방식으로 overfitting을 방지하는 효과를 낸다.
+
+- BN 적용해서 학습 이후 실제 사용시에 주의할 점은? 코드로는?
+
+  scale up을 다시 해줘야한다..? 잘은 모르겠습니다..
+
+- GAN에서 Generator 쪽에도 BN을 적용해도 될까?
+
+  generator의 output과 discriminator의 input을 제외하고, discribminator와 generator model에 모두 사용되도록 권장되고 있습니다.
+
+ref
+
+https://flonelin.wordpress.com/2020/05/20/%EC%95%88%EC%A0%95%EC%A0%81%EC%9D%B8-generative-adversarial-network-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%8C%81%EB%93%A4/
+
+
+
+s
