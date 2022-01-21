@@ -62,6 +62,13 @@
         <sub>한건우</sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/hongsusoo">
+        <img src="https://avatars.githubusercontent.com/u/77658029?v=4" width="100px;" alt=""/>
+        <br />
+        <sub>홍요한</sub>
+      </a>
+    </td>
   </tr>
   <tr>
 <!--     <td align="center">
