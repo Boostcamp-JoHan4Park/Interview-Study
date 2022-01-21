@@ -13,7 +13,14 @@
 - [R square의 의미는 무엇인가요?](#9)
 - [평균(mean)과 중앙값(median)중에 어떤 케이스에서 뭐를 써야할까요?](#10)  
 - [중심극한정리는 왜 유용한걸까요?](#11)  
-- [엔트로피(entropy)에 대해 설명해주세요. 가능하면 Information Gain도요.](#12)  
+- [엔트로피(entropy)에 대해 설명해주세요. 가능하면 Information Gain도요.](#12)
+- [어떨 때 모수적 방법론을 쓸 수 있고, 어떨 때 비모수적 방법론을 쓸 수 있나요?](#13)
+- [“likelihood”와 “probability”의 차이는 무엇일까요?](#14)
+- [통계에서 사용되는 bootstrap의 의미는 무엇인가요.](#15)
+- [모수가 매우 적은 (수십개 이하) 케이스의 경우 어떤 방식으로 예측 모델을 수립할 수 있을까요?](#16)
+- [베이지안(Bayesian approach)과 프리퀀티스트(frequentist approach) 간의 입장차이를 설명해주실 수 있나요?](#17)
+- [검정력(statistical power)은 무엇일까요?](#18)
+- [missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?](#19)
 
 ---
 
@@ -128,7 +135,7 @@ Q : p-value를 모르는 사람에게 설명한다면 어떻게 설명하실 건
 </details>
 <br>
 
-### #8
+### #9
 Q : R square의 의미는 무엇인가요?
 <details><summary>Keyword : 결정계수, SSD, RSS, 예측 모형 설명력</summary>
 
@@ -142,7 +149,7 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=victoria1590
 </details>
 <br>
 
-### #9
+### #10
 Q : 평균(mean)과 중앙값(median)중에 어떤 케이스에서 뭐를 써야할까요?
 <details><summary>Keyword : Outlier</summary>
 
@@ -155,7 +162,7 @@ Q : 평균(mean)과 중앙값(median)중에 어떤 케이스에서 뭐를 써야
 </details>
 <br>
 
-### #10
+### #11
 Q : 중심극한정리는 왜 유용한걸까요?
 <details><summary>Keyword : 통계적 유의성 검정, 신뢰구간 추론</summary>
 
@@ -168,7 +175,7 @@ https://namu.wiki/w/%EC%A4%91%EC%8B%AC%EA%B7%B9%ED%95%9C%EC%A0%95%EB%A6%AC
 </details>
 <br>
 
-### #11
+### #12
 Q : 엔트로피(entropy)에 대해 설명해주세요. 가능하면 정보량(Information Gain)도요.
 <details><summary>Keyword : 무질서도, 희소성과 유용성</summary>
 
@@ -183,47 +190,110 @@ https://bskyvision.com/389
 </details>
 <br>
 
-### #12
+### #13
 Q : 어떨 때 모수적 방법론을 쓸 수 있고, 어떨 때 비모수적 방법론을 쓸 수 있나요?
 <details><summary>Keyword : 모수(모집단 통계량), 중심극한정리, </summary>
 
-∟ A : 모수
-전체 집단을 모두 조사하는 것은 대체적으로 불가능하기 때문에, 표본을 추출하여 모집단의 통계적 특징을 추정하게 된다. 우리가 실질적으로 확인하고 싶은 것은 모집단의 모평균, 모표준편차, 모분산인데 이런 모집단은 통계량을 모수라고 한다. 우리는 이런 모수를 추정하기 위해서 중심극한정리를 사용하여 
+∟ A : 
+통계적 의미
+모수적 추론 : 미지의 모수가 특정한 분포 함수식이 있다고 가정하고, 모수에 대해서 추론하는 방법(a branch of statistics that assumes data has come from a type of probability distribution)
+비모수적 추론 : 모집단에 대한 가정을 특정한 분포 함수의 모수형으로 하지 않는 추론
 
-모수적 방법
+Model 적인 의미
+Parametric model: The model has a fixed number of parameters. 모델의 파라미터 수가 정해져 있다.
+Non-parametric model: The number of parameters grow with the amount of training data. 파라미터의 수가 학습 데이터의 크기에 따라 달라진다. 
 
-① 표본의 모집단이 정규분포를 이루어야 한다. 
-② 집단내의 분산은 같아야 한다. 
-③ 변인은 등간척도나 비율척도로 측정되어야 한다. 
+Parametric model: Linear regression, Logistic regression, Bayesian inference, Neural network(CNN, RNN 등) 등. 모델이 학습해야 하는 것이 명확히 정해져 있기 때문에 속도가 빠르고, 모델을 이해하기가 쉽다는 장점이 있다. 하지만 데이터의 분포가 특정한 분포를 따른다는 가정을 해야 하기 때문에 flexibility가 낮고, 간단한 문제를 푸는 데에 더 적합하다는 단점을 가진다. 
 
-비모수적 방법
+Non-parametric model: Decision tree, Random forest, K-nearest neighbor classifier 등. 데이터가 특정한 분포를 따른다는 가정을 하지 않기 때문에 더 flexible하다는 장점이 있다. 하지만 속도가 느린 경우가 많고, 더 큰 데이터를 필요로 하는 경우가 있으며 모델이 왜 그런 형태가 되었는지에 대한 명확한 설명을 하기가 쉽지 않다. 
 
-① 정규성 검정에서 정규분포를 따르지 않을경우
-② 군당 10명 미만의 소규모 실험에서 정규성을 가정할 수 없는경우
-③ 숫자로 표현되지만 수량화 할 수 없고, 평균을 낼 수도 없는  경우
 
 출처 : 
-https://zzanhtt.tistory.com/18
-https://immunologystudyroom.tistory.com/46
+https://zzanhtt.tistory.com/18 -> 통계
+https://immunologystudyroom.tistory.com/46 -> 통계
+https://brunch.co.kr/@seoungbumkim/7#comment 
+https://process-mining.tistory.com/131 -> ML 쪽
 
 </details>
 <br>
 
-### #13
+### #14
 Q : “likelihood”와 “probability”의 차이는 무엇일까요?
+<details><summary>Keyword : </summary>
+
+∟ A : 확률은 하나의 고정된 분포에서 특정 변수가 관측될 가능성을 나타내는 것이고, 가능도는 관측된 변수들이 분포의 변화에 따라 바뀌는 확률값을 가능도라고 하고 그 분포에서의 가능도는 그 가능도를 모두 곱한 값으로 사용한다. 이것은 분포가 변화함에 따라 분포에서 보여지는 확률값을 나타내지만 가능도는 확률이 아니기 때문에 넓이가 1이 될 수 있고, 값이 1보다 커질 수 있다.
+하지만 대부분 소수점 자리로, 변수들이 많아지게 되면 너무 작은 값들의 곱이 계속되기 때문에 컴퓨터 연산에서의 오차가 크게 작용하게 되어 Log를 취해 더하는 방식으로 많이 사용된다.
+
+확률 대신 가능도를 썼을때의 장점 : 
+확률밀도함수에서 범위가 아닌 데이터가 주어졌을 때에 적절한 모수를 구할 수 있음
+모집단에 대한 정확한 분포를 알 수 없을 때, 여러 모수로 비교하여 그 순간에 최적의 모수를 구할 수 있음
+
+확률 : 
+이항분포에서 보면 아래와 같이 발생할 확률이 주어지고, 10번 시행시 k값 즉 몇번 이기는지, 동전의 앞면이 몇번 나왔는지를 알면 그 갯수에 따른 확률을 알 수가 있다. 이것이 확률의 개념이고.
+$p = p^k * (1 - p)^{(10-k)}$
+
+가능도 : 
+확률에서 정해진 모수를 Theta로 잡고(이항분포에서 평균은 np), k값을 임의의 실수로 정해져 있다고 하면 가능도 함수가 그려지고, 이때의 값이 최대가 되게 하는 Theta값을 구하게 되면, 0.3의 값이 나오게 된다. 이 값은 10번 시행했을때 앞면이 3번 나오고, 뒷면이 7번 나오는 확률을 가장 높게 만드는 $\theta$값이 나오게 되는데, 이 개념이 가능도이다.
+$Likelihood = \theta^k * (1 - \theta)^{(n-k)}$ → $Likelihood = \theta^3 * (1 - \theta)^{(10-3)}$
+
+</details>
+<br>
+
+### #15
+Q : 통계에서 사용되는 bootstrap의 의미는 무엇인가요.
+<details><summary>Keyword : resampling, 복원추출</summary>
+
+∟ A : Resampling의 개념으로 표본이 주어졌을때 모수의 분포를 추정하는 강력한 방법으로 표본에서 복원추출하는 방식이다.
+
+출처 : https://bkshin.tistory.com/entry/DATA-12
+
+</details>
+<br>
+
+### #16
+Q : 모수가 매우 적은 (수십개 이하) 케이스의 경우 어떤 방식으로 예측 모델을 수립할 수 있을까요?
+<details><summary>Keyword : 오버샘플링, Augmentation</summary>
+
+∟ A : resample의 복원추출 방식(oversampling)방식을 사용하여 Data의 수를 늘려주거나, 이미지의 경우 Data Augmentation 진행할 수 있다.
+
+</details>
+<br>
+
+### #17
+Q : 베이지안(Bayesian approach)과 프리퀀티스트(frequentist approach) 간의 입장차이를 설명해주실 수 있나요?
+<details><summary>Keyword : 베이지안 - 확률분포 갱신, 프리퀀티스트 - 하나의 확률분포</summary>
+
+∟ A : 프리퀀티스트의 경우 특정 정해진 확률값을 검증하기 위해 실험하고, 오차가 커질 경우 그 가설을 기각하는 방식으로 추로하는 방식을 하는 사람들을 얘기하고,
+베이지안의 경우 실험을 통해 처음 예측한 확률값을 검증하는 것이 아닌 갱신하는 방식으로 분포를 추론하는 방식을 취하는 사람을 의미합니다. 
+
+이 두 입장을 ML 관점에서 생각해 봤을때. 프리퀀티스트는 전체데이터를 한번에 학습시켜 가중치를 구한 경우, 베이지안의 경우 Minibatch를 통하여 가중치를 업데이트하는 방식으로 생각해봤습니다.
+
+출처 :
+https://www.ibric.org/myboard/read.php?id=19818&Page=&Board=SORI&FindIt=&FindText
+https://www.notion.so/006-7b93d4275e1c45388227c8fbcec16550
+
+</details>
+<br>
+
+### #18
+Q : 검정력(statistical power)은 무엇일까요?
 <details><summary>Keyword : </summary>
 
 ∟ A : 
 
+
 </details>
 <br>
 
+### #19
+Q : missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?
+<details><summary>Keyword : </summary>
 
-통계에서 사용되는 bootstrap의 의미는 무엇인가요.
-모수가 매우 적은 (수십개 이하) 케이스의 경우 어떤 방식으로 예측 모델을 수립할 수 있을까요?
-베이지안과 프리퀀티스트 간의 입장차이를 설명해주실 수 있나요?
-검정력(statistical power)은 무엇일까요?
-missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?
+∟ A : 
+
+
+</details>
+<br>
 
 +
 무어-펜로즈 유사역행렬 : 특이값 분해를 통해 계산할 수 있고, 가역행렬의 역행렬 구하는 방식의 일반화된 방법이다
