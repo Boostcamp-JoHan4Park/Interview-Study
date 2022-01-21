@@ -214,6 +214,7 @@ https://immunologystudyroom.tistory.com/46 -> 통계
 https://brunch.co.kr/@seoungbumkim/7#comment 
 https://process-mining.tistory.com/131 -> ML 쪽
 
+</details>
 <br>
 
 ### #14
@@ -234,7 +235,6 @@ $p = p^k * (1 - p)^{(10-k)}$
 가능도 : 
 확률에서 정해진 모수를 Theta로 잡고(이항분포에서 평균은 np), k값을 임의의 실수로 정해져 있다고 하면 가능도 함수가 그려지고, 이때의 값이 최대가 되게 하는 Theta값을 구하게 되면, 0.3의 값이 나오게 된다. 이 값은 10번 시행했을때 앞면이 3번 나오고, 뒷면이 7번 나오는 확률을 가장 높게 만드는 $\theta$값이 나오게 되는데, 이 개념이 가능도이다.
 $Likelihood = \theta^k * (1 - \theta)^{(n-k)}$ → $Likelihood = \theta^3 * (1 - \theta)^{(10-3)}$
-
 
 </details>
 <br>
