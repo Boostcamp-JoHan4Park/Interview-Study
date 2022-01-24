@@ -145,6 +145,8 @@
 * 베이지안과 프리퀀티스트 간의 입장차이를 설명해주실 수 있나요?  
 * 검정력(statistical power)은 무엇일까요?  
 * missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?  
+* 아웃라이어의 판단하는 기준은 무엇인가요?  
+* 필요한 표본의 크기를 어떻게 계산합니까?  
 
 ### [Deep Learning](./answers/deep-learning.md)  
 
@@ -179,6 +181,11 @@
   * Dropout의 효과는?  
   * BN 적용해서 학습 이후 실제 사용시에 주의할 점은? 코드로는?  
   * GAN에서 Generator 쪽에도 BN을 적용해도 될까?  
+* SGD, RMSprop, Adam에 대해서 아는대로 설명한다면?  
+  * SGD에서 Stochastic의 의미는?  
+  * 미니배치를 작게 할때의 장단점은?  
+  * 모멘텀의 수식을 적어 본다면?  
+
 
 ### [Machine Learning](./answers/machine-learning.md)  
 
@@ -201,7 +208,8 @@
 * 지금 나오고 있는 deep learning 계열의 혁신의 근간은 무엇이라고 생각하시나요?  
 * ROC 커브에 대해 설명해주실 수 있으신가요?  
 * 여러분이 서버를 100대 가지고 있습니다. 이때 인공신경망보다 Random Forest를 써야하는 이유는 뭘까요?  
-
+* K-means의 대표적 의미론적 단점은 무엇인가요? (계산량 많다는것 말고)  
+* L1, L2 정규화에 대해 설명해주세요.  
 <br>
 
 ## Part2
