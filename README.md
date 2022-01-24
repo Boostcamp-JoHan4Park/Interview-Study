@@ -219,6 +219,8 @@
 * What are the key features of Python?  
 * What type of language is python? Programming or scripting?  
 * Python an interpreted language. Explain.  
+* What is pep 8?  
+* How is memory managed in Python?  
 
 <br>
 
