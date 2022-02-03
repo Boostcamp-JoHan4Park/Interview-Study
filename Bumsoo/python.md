@@ -43,6 +43,21 @@ Answer:
 
 <br/>
 
+## What is pep 8?
+
+Keyword: 협업을 위한 가이드, 규칙
+Answer: 파이썬 코드를 어떻게 구상할 지 알려주는 스타일 가이드
+다른 사람과 원활하게 협업하려면 공통된 스타일 공유가 필요 합니다.
+일관성 있는 스타일은 나중에 수정하기 쉽습니다.
+
+## How is memory managed in Python?
+
+Keyword:
+Answer: Python Memory Manager가 모든 메모리 관련 사항을 관리해준다. 모든 것을 객체로 치부한다. 따라서 C와는 다르게 메모리에 직접 값이 할당되지 않고, heap에 해당 object가 생성된 후에 stack에서 이를 가르키는 형태로 값이 할당된다.
+
+- What is namespace in Python?
+- What is PYTHONPATH?
+
 ---
 
 ## What does len() do?

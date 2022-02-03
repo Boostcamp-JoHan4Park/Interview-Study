@@ -61,3 +61,6 @@ Answer: Key란 데이터베이스에서 조건에 만족하는 튜플을 찾거�
   - Inner join: 교집합
   - Left/Right join: 부분집합
   - Outer join: 합집합
+
+* PostgreSQL의 장점은 무엇일까요?
+* 인덱스는 크게 Hash 인덱스와 B+Tree 인덱스가 있습니다. 이것은 무엇일까요?

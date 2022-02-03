@@ -229,3 +229,21 @@ Keyword: Ensemble
 Answer: Random forest는 모델을 ensemble하기 때문에 여러 대의 서버에서 나온 결과를 ensemble해서 병렬적으로 처리하기 때문에 서버가 많을 경우 쓰기에 좋음?
 
 - random forest는 ensemble 모델이라 regularization이 잘 돼서?
+
+## K-means의 대표적 의미론적 단점은 무엇인가요? (계산량 많다는것 말고)
+
+Keyword: 초기화 잘못 하면 local minima, 해석 어려움
+Answer: K-means clustering은 중심값 선정, 거리로 데이터 분류, 분류 완료까지 반복의 과정을 거치기 때문에 중앙값 초기화를 잘못 할 경우 local minima에 빠질 위험이 있다. 또한 모든 데이터를 거리로만 판단하기 때문에 사전에 주어진 목적이 없어 결과 해석이 어렵다는 단점이 있습니다.
+
+- 분석 결과가 관찰치 사이의 거리 또는 유사성을 어떻게 정의하느냐에 따라 크게 좌우된다. 즉, K-means algorithm은 초기화에 따라 다른 결과가 나타날 수 있다. 초기화가 잘못 된다면 나쁜 경우 local optima에 빠지는 경우가 존재한다. (참고 : https://wikidocs.net/4693)
+- 결과해석이 어렵다. (∵탐색적인 분석방법으로 장점을 가지고 있는 반면 사전에 주어진 목적이 없으므로 결과를 해석하는데 어려움이 존재)
+
+<br/>
+
+## L1, L2 정규화에 대해 설명해주세요.
+
+Keyword:
+Answer: L1 norm은 두 벡터의 차의 절대값을 합하고 L2는 Euclidean distance를 구합니다. L2 norm은 특정 가중치가 너무 커져 과적합 되는 것을 방지합니다.
+
+- Cross Validation은 무엇이고 어떻게 해야하나요?
+- XGBoost을 아시나요? 왜 이 모델이 캐글에서 유명할까요?

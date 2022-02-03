@@ -4,8 +4,9 @@ Keyword:
 Answer: 행렬 A를 선형변환으로 봤을 때, 선형변환 A에 의한 변환 결과가 자기 자신의 상수배가 되는 0이 아닌 벡터를 고유벡터라 하고, 이 상수배 값을 고유값이라 합니다. DL에서는 A가 주어져있고 람다와 x를 찾는게 목적입니다.(보충필요)
 
 - SVD, PCA에서 자주 쓰이는 개념! 벡터/기하학적 의미를 DL과 연관시켜 설명하는 것이 중요할듯
-- A가 주어져있고, 람다와 x를 찾는게 목적
-- 참고: https://darkpgmr.tistory.com/105
+- A가 주어져있고, 람다와 x를 찾는게 목적 --> 주성분분석(PCA)에서 사용
+- 참고: https://darkpgmr.tistory.com/105  
+  https://angeloyeo.github.io/2019/07/27/PCA.html
 
 <br/>
 
@@ -91,7 +92,7 @@ Answer: 공분산은 각 확률변수들이 어떻게 퍼져있는지를 나타�
 
 ## 신뢰 구간(Confidence Interval;CI)의 정의는 무엇인가요?
 
-Keyword: 모수, 예측범위
+Keyword: 모수, 예측범위  
 Answer: 내가 추출한 표본평균이 관측될만한 범위, 모수가 실제로 포함될 것으로 예측되는 범위
 
 - 모수가 실제로 포함될 것으로 예측되는 범위 --> 내가 추출한 표본평균이 이 범위에 ~% 확률로 들어온다
@@ -170,7 +171,7 @@ Answer: Entropy는 0~1 사이의 값으로 주어진 데이터 집합의 혼잡�
 ## 어떨 때 모수적 방법론을 쓸 수 있고, 어떨 때 비모수적 방법론을 쓸 수 있나요?
 
 Keyword: 정규성 검정, 표본 개수  
-Answer: 모수적 방법론은 일반적으로 표본당 30개 이상으로 구성될 경우 정규분포를 따른다고 가정해 사용
+Answer: 모수적 방법론은 일반적으로 표본당 30개 이상으로 구성될 경우 정규분포를 따른다고 가정해 사용.
 비모수적 방법론은 정규성 검정에서 정규분포를 따르지 않는다고 증명되거나, 표본의 개수가 10개 미만일 때 사용
 
 - 모수적 방법론(Parametic method): 모수를 함수형태의 분포를 가정하여 접근하는 방법  
@@ -187,7 +188,7 @@ Answer: 모수적 방법론은 일반적으로 표본당 30개 이상으로 구�
 ## “likelihood”와 “probability”의 차이는 무엇일까요?
 
 Keyword:  
-Answer: 확률probability은 어떤 시행(trial, experiment)에서 특정 결과(sample)가 나올 가능성. 즉, 시행 전 모든 경우의 수의 가능성은 정해져 있으며 그 총합은 1(100%)
+Answer: 확률probability은 어떤 시행(trial, experiment)에서 특정 결과(sample)가 나올 가능성. 즉, 시행 전 모든 경우의 수의 가능성은 정해져 있으며 그 총합은 1(100%)  
 우도likelihood는 어떤 시행(trial, experiment)을 충분히 수행한 뒤 그 결과(sample)를 토대로 경우의 수의 가능성을 도출하는 것. 아무리 충분히 수행해도 어디까지나 추론(inference)이기 때문에 가능성의 합이 1이 되지 않을 수도 있다.
 
 - 참고: https://yjam.tistory.com/38
@@ -244,8 +245,31 @@ Answer: 검정이 귀무 가설을 올바르게 기각하는 확률
 
 ## missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?
 
-Keyword: bias, underfit
+Keyword: bias, underfit  
 Answer: 누락값이 많은 데이터셋으로 모델을 학습시키면 bias, underfit 등 성능에 많은 영향을 미치기 때문
 
-- 참고: https://dining-developer.tistory.com/19
+- 참고: https://dining-developer.tistory.com/19  
   https://subinium.github.io/missing-data-handling/
+
+## 아웃라이어의 판단하는 기준은 무엇인가요?
+
+Keyword: STD, IQR box plot, Isolation forest, DBScan
+Answer: 보통은 IQR box plot를 이용해 중위값을 기준으로 판단합니다.
+
+- https://lsjsj92.tistory.com/556
+- https://gannigoing.medium.com/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9D%B4%EC%83%81%EC%B9%98-outlier-%EC%9D%98-%EA%B8%B0%EC%A4%80%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-f11f60bf901a
+
+## 필요한 표본의 크기를 어떻게 계산합니까?
+
+Keyword:  
+Answer:
+
+## Bias를 통제하는 방법은 무엇입니까?
+
+Keyword:  
+Answer:
+
+## 로그 함수는 어떤 경우 유용합니까? 사례를 들어 설명해주세요.
+
+Keyword:  
+Answer:

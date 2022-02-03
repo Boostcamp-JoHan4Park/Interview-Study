@@ -1,21 +1,20 @@
 ## 딥러닝은 무엇인가요? 딥러닝과 머신러닝의 차이는?
 
 Keyword: Neural network, feature extraction  
-Answer: 딥러닝은 neural network를 이용해 ML 학습을 수행하는 것으로, ML과의 가장 큰 차이점은 feature extraction에 사람이 개입하지 않는다는 것입니다
+Answer: 딥러닝은 neural network를 이용해 ML 학습을 수행하는 것으로, ML과의 가장 큰 차이점은 feature selection에 사람이 개입하지 않는다는 것입니다
 
-- Neural Network 쓰면 DL, 안쓰면 ML
-- ML: 휴리스틱하게, 특징추출에서 사람이 개입  
+- ML: 휴리스틱하게, 특징선택에서 사람이 개입  
   Mасhine Leаrning is а subset оf Аrtifiсiаl Intelligenсe thаt uses **stаtistiсаl leаrning аlgоrithms** tо build systems thаt hаve the аbility tо аutоmаtiсаlly leаrn аnd imрrоve frоm exрerienсes withоut being exрliсitly рrоgrаmmed.  
   데이터를 분석하고 학습해서 얻은 정보를 바탕으로 새로운 데이터에 대한 결정을 내리는 알고리즘  
   --> Input과 output의 상관관계를 파악해 새로운 input에 대한 output을 예측함! 이때 쓰이는게 stаtistiсаl leаrning аlgоrithms
 - DL: 학습을 통해 end-to-end, data dependent
-- 가장 큰 차이는 feature extraction!!
+- 가장 큰 차이는 feature selection!!
 
 <br/>
 
 ## Cost Function과 Activation Function은 무엇인가요?
 
-Keyword: 오차 계산, 선형 to 비선형
+Keyword: 오차 계산, 선형 to 비선형  
 Answer: Cost function은 모델의 예측값과 오차를 계산해주는 함수로 학습 뱡향을 어느 방향으로 얼마나 개선할지 판단하는 지표가 됩니다. Activation function은 선형 함수를 비선형함수로 만들어 표현력을 더 키워주는 함수입니다.
 
 - Cost function : 모델의 예측값과 정답의 오차를 계산해주는 함수  
@@ -159,7 +158,7 @@ Answer: ReLU는 선형(y=x)과 비선형(y=0)의 결합이기 때문에 ReLU가 
 
 ### ReLU의 문제점은?
 
-Keyword:  
+Keyword: Input이 0보다 작을 경우  
 Answer: Input이 0보다 작을 경우 gradient가 0이 됩니다.
 
 ### Bias는 왜 있는걸까?
@@ -263,3 +262,33 @@ Answer: DCGAN generator의 마지막 layer와 dicsriminator의 첫번째 layer�
 하지만 mini-batch의 크기가 작을 경우 GAN이 생성하는 image가 z code보다 batch normalization의 fluctuation에 영향을 많이 받을 경우 batch간 correlation이 생기는 문제가 발생함.
 
 - 참고: https://kakalabblog.wordpress.com/2017/07/27/gan-tutorial-2016/
+
+## SGD, RMSprop, Adam에 대해서 아는대로 설명한다면?
+
+![](https://images.velog.io/images/hanlyang0522/post/807cea1e-b014-42e2-9be0-156a7b9abcd2/image.png)
+
+Keyword: 기울기를 업데이트 하는 방식  
+Answer: SGD는 loss function을 계산할 때 전체 batch가 아니라 일부 데이터(mini-batch)만 사용해 같은 시간에 더 많은 step을 갈 수 있어 local minima에 빠지지 않고 더 좋은 방향으로 수렴할 가능성이 높다. RMSprop은 기울기를 단순 누적하지 않고 weighted moving average를 사용해 최신 기울기를 더 크게 반영하도록 한다. Adam은 momentum과 RMSprop을 결합해 스텝 방향과 사이즈 모두 고려함.
+
+### SGD에서 Stochastic의 의미는?
+
+Keyword: 확률론적인  
+Answer: 확률론적인, 약간은 랜덤한 결과, 약간의 불확실성을 포함한 다양한 프로세스를 의미
+
+### 미니배치를 작게 할때의 장단점은?
+
+Keyword: 연산량을 줄임  
+Answer: 연산량을 줄여 같은 시간에 더 많은 step을 나갈 수 있다
+
+### 모멘텀의 수식을 적어 본다면?
+
+![](https://images.velog.io/images/hanlyang0522/post/03b9292b-5ea4-494e-923b-69bcd0f6d7a0/image.png)
+
+Keyword: 관성을 적용  
+Answer: W를 업데이트 할 때 이전 단계의 업데이트 방향을 반영  
+a는 learning rate, m은 모멘텀 계수
+
+- 간단한 MNIST 분류기를 MLP+CPU 버전으로 numpy로 만든다면 몇줄일까?
+  - 어느 정도 돌아가는 녀석을 작성하기까지 몇시간 정도 걸릴까?
+  - Back Propagation은 몇줄인가?
+  - CNN으로 바꾼다면 얼마나 추가될까?

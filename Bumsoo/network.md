@@ -81,7 +81,7 @@ UDP는 비연결형 서비스이기 때문에, 연결을 설정하고 해제하�
    프로세스 A는 확인했다는 메시지를 전송
 
 - 참고: https://gmlwjd9405.github.io/2018/09/19/tcp-connection.html  
-https://github.com/LandvibeDev/cs-special-forces-headquarters/blob/main/network/CH.03%ED%8A%B8%EB%9E%9C%EC%8A%A4%ED%8F%AC%ED%8A%B8%EA%B3%84%EC%B8%B5/CH.03%20%ED%8A%B8%EB%9E%9C%EC%8A%A4%ED%8F%AC%ED%8A%B8%20%EA%B3%84%EC%B8%B5.md
+  https://github.com/LandvibeDev/cs-special-forces-headquarters/blob/main/network/CH.03%ED%8A%B8%EB%9E%9C%EC%8A%A4%ED%8F%AC%ED%8A%B8%EA%B3%84%EC%B8%B5/CH.03%20%ED%8A%B8%EB%9E%9C%EC%8A%A4%ED%8F%AC%ED%8A%B8%20%EA%B3%84%EC%B8%B5.md
 
 ---
 
@@ -117,3 +117,6 @@ mac 주소가 하드웨어 주소인 이유는 랜카드에 mac 주소가 할당
 참조
 https://jhnyang.tistory.com/404#index0
 https://m.blog.naver.com/wood0513/222084400286
+
+- TCP의 연결 설정 과정(3단계)과 연결 종료 과정(4단계)이 단계가 차이나는 이유가 무엇인가요?
+- 만약 Server에서 FIN 플래그를 전송하기 전에 전송한 패킷이 Routing 지연이나 패킷 유실로 인한 재전송 등으로 인해 FIN 패킷보다 늦게 도착하는 상황이 발생하면 어떻게 될까요?
