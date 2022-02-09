@@ -62,6 +62,13 @@
         <sub>한건우</sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/hongsusoo">
+        <img src="https://avatars.githubusercontent.com/u/77658029?v=4" width="100px;" alt=""/>
+        <br />
+        <sub>홍요한</sub>
+      </a>
+    </td>
   </tr>
   <tr>
 <!--     <td align="center">
@@ -138,6 +145,10 @@
 * 베이지안과 프리퀀티스트 간의 입장차이를 설명해주실 수 있나요?  
 * 검정력(statistical power)은 무엇일까요?  
 * missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?  
+* 아웃라이어의 판단하는 기준은 무엇인가요?  
+* 필요한 표본의 크기를 어떻게 계산합니까?  
+* Bias를 통제하는 방법은 무엇입니까?  
+* 로그 함수는 어떤 경우 유용합니까? 사례를 들어 설명해주세요.  
 
 ### [Deep Learning](./answers/deep-learning.md)  
 
@@ -172,6 +183,14 @@
   * Dropout의 효과는?  
   * BN 적용해서 학습 이후 실제 사용시에 주의할 점은? 코드로는?  
   * GAN에서 Generator 쪽에도 BN을 적용해도 될까?  
+* SGD, RMSprop, Adam에 대해서 아는대로 설명한다면?  
+  * SGD에서 Stochastic의 의미는?  
+  * 미니배치를 작게 할때의 장단점은?  
+  * 모멘텀의 수식을 적어 본다면?  
+* 간단한 MNIST 분류기를 MLP+CPU 버전으로 numpy로 만든다면 몇줄일까?  
+  * 어느 정도 돌아가는 녀석을 작성하기까지 몇시간 정도 걸릴까?  
+  * Back Propagation은 몇줄인가?  
+  * CNN으로 바꾼다면 얼마나 추가될까?  
 
 ### [Machine Learning](./answers/machine-learning.md)  
 
@@ -194,7 +213,10 @@
 * 지금 나오고 있는 deep learning 계열의 혁신의 근간은 무엇이라고 생각하시나요?  
 * ROC 커브에 대해 설명해주실 수 있으신가요?  
 * 여러분이 서버를 100대 가지고 있습니다. 이때 인공신경망보다 Random Forest를 써야하는 이유는 뭘까요?  
-
+* K-means의 대표적 의미론적 단점은 무엇인가요? (계산량 많다는것 말고)  
+* L1, L2 정규화에 대해 설명해주세요.  
+* Cross Validation은 무엇이고 어떻게 해야하나요?  
+* XGBoost을 아시나요? 왜 이 모델이 캐글에서 유명할까요?  
 <br>
 
 ## Part2
@@ -204,7 +226,10 @@
 * What are the key features of Python?  
 * What type of language is python? Programming or scripting?  
 * Python an interpreted language. Explain.  
-
+* What is pep 8?  
+* How is memory managed in Python?  
+* What is namespace in Python?  
+* What is PYTHONPATH?  
 <br>
 
 ## Part3
@@ -216,7 +241,8 @@
 * TCP와 UDP의 차이를 설명해주세요.  
 * TCP와 UDP의 헤더를 비교해주세요.  
 * TCP의 3-way-handshake와 4-way-handshake를 비교 설명해주세요.  
-
+* TCP의 연결 설정 과정(3단계)과 연결 종료 과정(4단계)이 단계가 차이나는 이유가 무엇인가요?  
+* 만약 Server에서 FIN 플래그를 전송하기 전에 전송한 패킷이 Routing 지연이나 패킷 유실로 인한 재전송 등으로 인해 FIN 패킷보다 늦게 도착하는 상황이 발생하면 어떻게 될까요?  
 ### [Operating System](./answers/operatingsystem.md)  
 
 * 프로세스와 스레드의 차이(Process vs Thread)를 알려주세요.  
@@ -225,7 +251,8 @@
 * Thread-safe에 대해 설명해주세요. (hint: critical section)  
 * 뮤텍스와 세마포어의 차이를 설명해주세요.  
 * 스케줄러가 무엇이고, 단기/중기/장기로 나누는 기준에 대해 설명해주세요.  
-
+* CPU 스케줄러인 FCFS, SJF, SRTF, Priority Scheduling, RR에 대해 간략히 설명해주세요.  
+* 동기와 비동기의 차이를 설명해주세요.  
 ### [Database](./answers/database.md)  
 
 * DBMS를 정의하세요.
@@ -236,7 +263,9 @@
     * Alternate Key  
     * Super Key  
     * Foreign Key  
-* SQL Join (join이란? join 종류)
+* SQL Join (join이란? join 종류)  
+* PostgreSQL의 장점은 무엇일까요?  
+* 인덱스는 크게 Hash 인덱스와 B+Tree 인덱스가 있습니다. 이것은 무엇일까요?  
 <br>
 
 ### [Algorithm](./answers/algorithm.md)

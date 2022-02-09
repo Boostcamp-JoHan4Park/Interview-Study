@@ -1,18 +1,31 @@
-### 고유값(eigen value)와 고유벡터(eigen vector)에 대해 설명해주세요. 그리고 왜 중요할까요?
+## 고유값(eigen value)와 고유벡터(eigen vector)에 대해 설명해주세요. 그리고 왜 중요할까요?
+
+Keyword:  
+Answer: 행렬 A를 선형변환으로 봤을 때, 선형변환 A에 의한 변환 결과가 자기 자신의 상수배가 되는 0이 아닌 벡터를 고유벡터라 하고, 이 상수배 값을 고유값이라 합니다. DL에서는 A가 주어져있고 람다와 x를 찾는게 목적입니다.(보충필요)
 
 - SVD, PCA에서 자주 쓰이는 개념! 벡터/기하학적 의미를 DL과 연관시켜 설명하는 것이 중요할듯
-- A가 주어져있고, 람다와 x를 찾는게 목적
-- 참고: https://darkpgmr.tistory.com/105
+- A가 주어져있고, 람다와 x를 찾는게 목적 --> 주성분분석(PCA)에서 사용
+- 참고: https://darkpgmr.tistory.com/105  
+  https://angeloyeo.github.io/2019/07/27/PCA.html
 
-### 샘플링(Sampling)과 리샘플링(Resampling)에 대해 설명해주세요. 리샘플링은 무슨 장점이 있을까요?
+<br/>
+
+## 샘플링(Sampling)과 리샘플링(Resampling)에 대해 설명해주세요. 리샘플링은 무슨 장점이 있을까요?
+
+Keyword:  
+Answer: 샘플링은 표본추출을 의미하고 리샘플링은 bootstrapping이나 cross validation처럼 내가 갖고 있는 샘플에서 다시 샘플 부분집합을 뽑아 통계량의 변동성(variability of statistics)을 확인하기 위해 사용합니다.
 
 - K-fold, Cross Validation, Bootstrapping
 - 샘플링 = 표본추출
 - 리샘플링은 모분포의 형태를 알 수 없을때 사용
-- 복원/비복원추출의 차이
 - 참고: https://cnp-0717.tistory.com/7
 
-### 확률 모형과 확률 변수는 무엇일까요?
+<br/>
+
+## 확률 모형과 확률 변수는 무엇일까요?
+
+Keyword:  
+Answer: 확률변수는 확률로 표현하기 위한 event를 정의하는 것을 말합니다. 확률모형은 불확실성을 확률로 계량하기 위해 확률함수를 이용해 수학적으로 만든 모형을 말합니다.
 
 - 확률변수: 확률로 표현하기 위한 event를 정의하는 것  
   어떤 것을 확률로 표현할 것인지에 대해 다양하게 정의가 가능하므로 변수라는 용어를 사용
@@ -21,7 +34,12 @@
   - 모수: 함수에 쓰인 계수
 - 참고: https://sumniya.tistory.com/24
 
-### 누적 분포 함수와 확률 밀도 함수는 무엇일까요? 수식과 함께 표현해주세요.
+<br/>
+
+## 누적 분포 함수와 확률 밀도 함수는 무엇일까요? 수식과 함께 표현해주세요.
+
+Keyword:  
+Answer:
 
 - 둘 다 확률 변수의 분포 즉, 확률 분포를 수학적으로 정의하기 위한 수식
   - 확률분포: 어떤 사건에 어느 정도의 확률이 할당되었는지를 묘사한 것  
@@ -35,13 +53,23 @@
    확률 밀도 함수는 특정 확률 변수 구간의 확률이 다른 구간에 비해 상대적으로 얼마나 높은가를 나타내는 것이며 그 값 자체가 확률은 아니다
 - 참고: https://notebook.community/kimkipyo/dss_git_kkp/%ED%86%B5%EA%B3%84%2C%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%B3%B5%EC%8A%B5/160523%EC%9B%94_6%EC%9D%BC%EC%B0%A8_%EA%B8%B0%EC%B4%88%20%ED%99%95%EB%A5%A0%EB%A1%A0%202%20-%20%ED%99%95%EB%A5%A0%20%EB%B6%84%ED%8F%AC%20Probability%20Distribution/6.%EB%88%84%EC%A0%81%20%EB%B6%84%ED%8F%AC%20%ED%95%A8%EC%88%98%EC%99%80%20%ED%99%95%EB%A5%A0%20%EB%B0%80%EB%8F%84%20%ED%95%A8%EC%88%98
 
-### 조건부 확률은 무엇일까요?
+<br/>
+
+## 조건부 확률은 무엇일까요?
+
+Keyword:  
+Answer: 조건부 확률은 주어진 사건이 일어났다는 가정 하에 다른 한 사건이 일어날 확률을 말합니다.
 
 - 주어진 사건이 일어났다는 가정 하에 다른 한 사건이 일어날 확률  
   확률 함수를 $Pr$ 라고 할 때, 사건 $B$ 가 일어났다는 가정 하에 사건 $A$ 가 일어날 조건부 확률은 $Pr (A|B)$ 로 표기
 - $P(A∣B)=P(A∩B)/P(B)$
 
-### 공분산과 상관계수는 무엇일까요? 수식과 함께 표현해주세요
+<br/>
+
+## 공분산과 상관계수는 무엇일까요? 수식과 함께 표현해주세요
+
+Keyword:  
+Answer: 공분산은 각 확률변수들이 어떻게 퍼져있는지를 나타내고 상관계수는 공분산을 확률변수의 절대적 크기에 영향을 받지 않도록 단위화를 시킨 것을 말합니다.
 
 ![](https://images.velog.io/images/hanlyang0522/post/c3a5b52b-884c-4a12-b5c3-8d868c3335b6/image.png)  
 (마지막은 $X, Y$가 독립일 경우 공분산 = 0)
@@ -60,9 +88,11 @@
   - X와 Y가 선형적 관계라면 상관계수는 1 혹은 -1이다.  
     양의 선형관계면 1, 음의 선형관계면 -1
 
-### 신뢰 구간(Confidence Interval;CI)의 정의는 무엇인가요?
+<br/>
 
-Keyword: 모수, 예측범위
+## 신뢰 구간(Confidence Interval;CI)의 정의는 무엇인가요?
+
+Keyword: 모수, 예측범위  
 Answer: 내가 추출한 표본평균이 관측될만한 범위, 모수가 실제로 포함될 것으로 예측되는 범위
 
 - 모수가 실제로 포함될 것으로 예측되는 범위 --> 내가 추출한 표본평균이 이 범위에 ~% 확률로 들어온다
@@ -73,7 +103,9 @@ Answer: 내가 추출한 표본평균이 관측될만한 범위, 모수가 실�
 
 - 참고: https://angeloyeo.github.io/2021/01/05/confidence_interval.html
 
-### p-value를 모르는 사람에게 설명한다면 어떻게 설명하실 건가요?
+<br/>
+
+## p-value를 모르는 사람에게 설명한다면 어떻게 설명하실 건가요?
 
 Keyword: 귀무가설, 확률
 Answer: 귀무가설을 전제로, 그 가설이 맞는다는 가정 하에, 표본에서 실제로 관측된 통계치와 '같거나 더 극단적인' 통계치가 관측될 확률
@@ -88,20 +120,26 @@ Answer: 귀무가설을 전제로, 그 가설이 맞는다는 가정 하에, 표
   https://data-make.tistory.com/114
   https://datascienceschool.net/02%20mathematics/09.04%20%EA%B2%80%EC%A0%95%EA%B3%BC%20%EC%9C%A0%EC%9D%98%ED%99%95%EB%A5%A0.html#:~:text=%EC%9C%A0%EC%9D%98%ED%99%95%EB%A5%A0%EC%9D%80%20%ED%99%95%EB%A5%A0%EB%B6%84%ED%8F%AC,%ED%95%98%EB%8A%94%20%EC%98%81%EC%97%AD%EC%9D%98%20%EB%A9%B4%EC%A0%81%EC%9D%B4%EB%8B%A4
 
-### R square의 의미는 무엇인가요?
+<br/>
+
+## R square의 의미는 무엇인가요?
 
 Keyword:
 Answer: Regression line이 어떻게 그려지냐에 따라 data의 성질을 잘 표현하는지 아닌지
 
 - 참고: https://heung-bae-lee.github.io/2020/01/09/machine_learning_03/
 
-### 평균(mean)과 중앙값(median)중에 어떤 케이스에서 뭐를 써야할까요?
+<br/>
+
+## 평균(mean)과 중앙값(median)중에 어떤 케이스에서 뭐를 써야할까요?
 
 Keyword: Outlier
 Answer: 값이 한쪽으로 치우친 경우 평균도 왜곡될 가능성이 있어서 중앙값을 씀
 중앙값은 관측값들의 변화에 민감하지 않고, outlier에 영향받지 않음
 
-### 중심극한정리는 왜 유용한걸까요?
+<br/>
+
+## 중심극한정리는 왜 유용한걸까요?
 
 Keyword: 정규분포, 표본의 크기가 클것
 Answer: 중심극한정리를 통해 모집단이 어떤 분포를 갖고있든 표본의 크기가 충분히 크다면, 표본평균의 분포는 정규분포를 이룬다는 점을 이용해 특정 사건(내가 수집한 표본의 평균)이 일어날 확률값을 계산할 수 있습니다
@@ -118,7 +156,9 @@ Answer: 중심극한정리를 통해 모집단이 어떤 분포를 갖고있든 
 
 ![](https://images.velog.io/images/hanlyang0522/post/5aa967d6-ba90-4957-b38f-874e2ea7fde0/image.png)
 
-### 엔트로피(entropy)에 대해 설명해주세요. 가능하면 Information Gain도요.
+<br/>
+
+## 엔트로피(entropy)에 대해 설명해주세요. 가능하면 Information Gain도요.
 
 Keyword: Purity  
 Answer: Entropy는 0~1 사이의 값으로 주어진 데이터 집합의 혼잡도를 의미하며, information gain은 어떤 속성을 선택함으로써 얻게되는 entropy 감소량을 말합니다.
@@ -126,10 +166,12 @@ Answer: Entropy는 0~1 사이의 값으로 주어진 데이터 집합의 혼잡�
 - entropy: sample의 purity를 보여줌
 - info gain: 전체 S가 특징 A에 의해 구분된 후 감소된 entropy, 클수록 구분을 잘한다
 
-### 어떨 때 모수적 방법론을 쓸 수 있고, 어떨 때 비모수적 방법론을 쓸 수 있나요?
+<br/>
+
+## 어떨 때 모수적 방법론을 쓸 수 있고, 어떨 때 비모수적 방법론을 쓸 수 있나요?
 
 Keyword: 정규성 검정, 표본 개수  
-Answer: 모수적 방법론은 일반적으로 표본당 30개 이상으로 구성될 경우 정규분포를 따른다고 가정해 사용
+Answer: 모수적 방법론은 일반적으로 표본당 30개 이상으로 구성될 경우 정규분포를 따른다고 가정해 사용.
 비모수적 방법론은 정규성 검정에서 정규분포를 따르지 않는다고 증명되거나, 표본의 개수가 10개 미만일 때 사용
 
 - 모수적 방법론(Parametic method): 모수를 함수형태의 분포를 가정하여 접근하는 방법  
@@ -141,15 +183,19 @@ Answer: 모수적 방법론은 일반적으로 표본당 30개 이상으로 구�
 - 정규성 검정: 데이터셋 분포가 정규분포를 따르는지 검정
   Shapri-Wilks test, Kolmogorove-Smirnov test, Quntile-Qunatile plot 등이 있음
 
-### “likelihood”와 “probability”의 차이는 무엇일까요?
+<br/>
+
+## “likelihood”와 “probability”의 차이는 무엇일까요?
 
 Keyword:  
-Answer: 확률probability은 어떤 시행(trial, experiment)에서 특정 결과(sample)가 나올 가능성. 즉, 시행 전 모든 경우의 수의 가능성은 정해져 있으며 그 총합은 1(100%)
+Answer: 확률probability은 어떤 시행(trial, experiment)에서 특정 결과(sample)가 나올 가능성. 즉, 시행 전 모든 경우의 수의 가능성은 정해져 있으며 그 총합은 1(100%)  
 우도likelihood는 어떤 시행(trial, experiment)을 충분히 수행한 뒤 그 결과(sample)를 토대로 경우의 수의 가능성을 도출하는 것. 아무리 충분히 수행해도 어디까지나 추론(inference)이기 때문에 가능성의 합이 1이 되지 않을 수도 있다.
 
 - 참고: https://yjam.tistory.com/38
 
-### 통계에서 사용되는 bootstrap의 의미는 무엇인가요.
+<br/>
+
+## 통계에서 사용되는 bootstrap의 의미는 무엇인가요.
 
 Keyword: 복원 추출, 모수 추정
 Answer: 현재 있는 표본에서 추가적으로 표본을 복원 추출하고 각 표본에 대한 통계량을 다시 계산해 모수의 분포를 정확하게 추정함
@@ -160,7 +206,9 @@ Answer: 현재 있는 표본에서 추가적으로 표본을 복원 추출하고
 - 참고: https://bioinfoblog.tistory.com/entry/%ED%86%B5%EA%B3%84-%EA%B8%B0%EC%B4%88-Bootstrap-%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9  
   https://bkshin.tistory.com/entry/DATA-12
 
-### 모수가 매우 적은 (수십개 이하) 케이스의 경우 어떤 방식으로 예측 모델을 수립할 수 있을까요?
+<br/>
+
+## 모수가 매우 적은 (수십개 이하) 케이스의 경우 어떤 방식으로 예측 모델을 수립할 수 있을까요?
 
 Keyword: 비모수 검정
 Answer: 모집단 수가 매우 적은 경우 표본평균의 분포가 정규분포를 따른다고 가정할 수 없으므로 비모수적 방법을 사용하여 예측모델을 수립
@@ -169,7 +217,9 @@ Answer: 모집단 수가 매우 적은 경우 표본평균의 분포가 정규�
 
 - 비모수적 검정을 사용?
 
-### 베이지안과 프리퀀티스트 간의 입장차이를 설명해주실 수 있나요?
+<br/>
+
+## 베이지안과 프리퀀티스트 간의 입장차이를 설명해주실 수 있나요?
 
 Keyword: 객관과 주관의 차이
 Answer: 프리퀀티스트는 정해진 모수가 있다고 가정 후 검증하고, 베이지안은 현재까지의 관측값을 바탕으로 가정하기 때문에 새로운 데이터가 들어오면 모수를 업데이트함
@@ -178,7 +228,9 @@ Answer: 프리퀀티스트는 정해진 모수가 있다고 가정 후 검증하
 
 - 참고: https://freshrimpsushi.github.io/posts/bayesian-paradigm/
 
-### 검정력(statistical power)은 무엇일까요?
+<br/>
+
+## 검정력(statistical power)은 무엇일까요?
 
 Keyword: 귀무가설을 기각
 Answer: 검정이 귀무 가설을 올바르게 기각하는 확률
@@ -189,10 +241,35 @@ Answer: 검정이 귀무 가설을 올바르게 기각하는 확률
 - 참고: https://support.minitab.com/ko-kr/minitab/19/help-and-how-to/statistics/power-and-sample-size/supporting-topics/what-is-power/  
   https://deep-learning-study.tistory.com/91
 
-### missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?
+<br/>
 
-Keyword: bias, underfit
+## missing value가 있을 경우 채워야 할까요? 그 이유는 무엇인가요?
+
+Keyword: bias, underfit  
 Answer: 누락값이 많은 데이터셋으로 모델을 학습시키면 bias, underfit 등 성능에 많은 영향을 미치기 때문
 
-- 참고: https://dining-developer.tistory.com/19
+- 참고: https://dining-developer.tistory.com/19  
   https://subinium.github.io/missing-data-handling/
+
+## 아웃라이어의 판단하는 기준은 무엇인가요?
+
+Keyword: STD, IQR box plot, Isolation forest, DBScan
+Answer: 보통은 IQR box plot를 이용해 중위값을 기준으로 판단합니다.
+
+- https://lsjsj92.tistory.com/556
+- https://gannigoing.medium.com/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9D%B4%EC%83%81%EC%B9%98-outlier-%EC%9D%98-%EA%B8%B0%EC%A4%80%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C-f11f60bf901a
+
+## 필요한 표본의 크기를 어떻게 계산합니까?
+
+Keyword:  
+Answer:
+
+## Bias를 통제하는 방법은 무엇입니까?
+
+Keyword:  
+Answer:
+
+## 로그 함수는 어떤 경우 유용합니까? 사례를 들어 설명해주세요.
+
+Keyword:  
+Answer:
